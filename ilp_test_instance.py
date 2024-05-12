@@ -59,14 +59,6 @@ with open(f'{folder}/network.json', 'r') as network_file:
                 stat["jitter"] = instance.j
                 stat['id'] = flow.get_id()
                 stats[flow.get_id()] = stat
-
-                for k,v in instance.x_eti.items():
-                    if v == 1:
-                        e,t,i = k
-                        w_fe = instance.w_fe[e]
-                        link = instance.network.get_link_by_id(e)
-                        for tt in range(t, t + w_fe):
-                            link.remove_t(tt)
           
 # save stats in pickle file
 import pickle

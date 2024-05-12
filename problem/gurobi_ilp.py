@@ -123,6 +123,10 @@ class GurobiILP(ILP):
                 e,t,i = var.varName.split("_")[2:]
                 e,t,i = int(e),int(t),int(i)
                 self.x_eti[e,t,i] = var.x
+                w_fe = self.w_fe[e]
+                if var.x == 1:
+                    for t in range(t, t + w_fe):
+                        self.network.get_link_by_id(e).remove_t(t)
             elif var.varName.startswith("y_p"):
                 i = var.varName.split("_")[2]
                 i = int(i)
