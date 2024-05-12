@@ -1,0 +1,6 @@
+Processing mode: FAST
+Duration: 100000 us
+Path generation mode: wifi2wifi
+Number of requests: 10
+Min size of the requests: 92 bytes
+Instance size: 2.537640625e+29

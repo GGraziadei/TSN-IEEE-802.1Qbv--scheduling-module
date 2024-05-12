@@ -1,0 +1,50 @@
+Flow 2_1 scheduled at interface 1 at timeslot 1
+Flow 1_1 scheduled at interface 1 at timeslot 2
+Flow 1_2 scheduled at interface 1 at timeslot 3
+Flow 2_2 scheduled at interface 1 at timeslot 4
+Flow 1_3 scheduled at interface 1 at timeslot 5
+Flow 1_4 scheduled at interface 1 at timeslot 6
+Flow 2_3 scheduled at interface 1 at timeslot 8
+Flow 1_5 scheduled at interface 1 at timeslot 9
+Flow 1_6 scheduled at interface 1 at timeslot 11
+Flow 2_4 scheduled at interface 1 at timeslot 12
+Flow 1_7 scheduled at interface 1 at timeslot 13
+Flow 1_8 scheduled at interface 1 at timeslot 14
+Flow 2_1 scheduled at interface 2 at timeslot 2
+Flow 1_1 scheduled at interface 2 at timeslot 3
+Flow 1_2 scheduled at interface 2 at timeslot 4
+Flow 2_2 scheduled at interface 2 at timeslot 5
+Flow 1_3 scheduled at interface 2 at timeslot 6
+Flow 1_4 scheduled at interface 2 at timeslot 8
+Flow 2_3 scheduled at interface 2 at timeslot 9
+Flow 1_5 scheduled at interface 2 at timeslot 10
+Flow 1_6 scheduled at interface 2 at timeslot 12
+Flow 2_4 scheduled at interface 2 at timeslot 13
+Flow 1_7 scheduled at interface 2 at timeslot 14
+Flow 1_8 scheduled at interface 2 at timeslot 15
+Flow 2_1 scheduled at interface 3 at timeslot 3
+Flow 1_1 scheduled at interface 3 at timeslot 4
+Flow 1_2 scheduled at interface 3 at timeslot 6
+Flow 2_2 scheduled at interface 3 at timeslot 7
+Flow 1_3 scheduled at interface 3 at timeslot 8
+Flow 1_4 scheduled at interface 3 at timeslot 10
+Flow 2_3 scheduled at interface 3 at timeslot 11
+Flow 1_5 scheduled at interface 3 at timeslot 12
+Flow 1_6 scheduled at interface 3 at timeslot 14
+Flow 2_4 scheduled at interface 3 at timeslot 15
+Flow 1_7 scheduled at interface 3 at timeslot 16
+Flow 1_8 scheduled at interface 3 at timeslot 18
+Delay for flow 1_1 is 256.0
+Delay for flow 1_2 is 256.0
+Delay for flow 1_3 is 256.0
+Delay for flow 1_4 is 256.0
+Delay for flow 1_5 is 256.0
+Delay for flow 1_6 is 256.0
+Delay for flow 1_7 is 256.0
+Delay for flow 1_8 is 256.0
+Jitter for flow 1 is 0.0
+Delay for flow 2_1 is 192.0
+Delay for flow 2_2 is 192.0
+Delay for flow 2_3 is 192.0
+Delay for flow 2_4 is 192.0
+Jitter for flow 2 is 0.0

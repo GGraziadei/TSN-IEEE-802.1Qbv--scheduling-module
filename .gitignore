@@ -8,3 +8,4 @@ problem/__pycache__/*
 *$py.class
 instance_generator/*.pickle
 instance_generator/*.bin
+*.pickle

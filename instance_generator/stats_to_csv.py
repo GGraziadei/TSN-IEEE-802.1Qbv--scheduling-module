@@ -1,0 +1,109 @@
+# load a pckl file and write stats in csv
+
+from enum import Enum
+import json
+import pickle
+import csv
+
+from argparse import ArgumentParser
+# generate a graph
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+parser = ArgumentParser()
+parser.add_argument("-f", "--filename", dest="filename", help="Output filename.", required=True)
+
+args = parser.parse_args()
+
+class Complexity(Enum):
+    LOW = 1
+    LOWMEDIUM = 2
+    MEDIUM = 3
+    MEDIUMHIGH = 4
+    HIGH = 5
+
+    def get_delta_complexity(self):
+        return {
+            Complexity.LOW: 0.3,
+            Complexity.LOWMEDIUM: 0.25,
+            Complexity.MEDIUM: 0.2,
+            Complexity.MEDIUMHIGH: 0.15,
+            Complexity.HIGH: 0.5
+        }[self]
+
+    def get_instance_name(self):
+        return {
+            Complexity.LOW: "low",
+            Complexity.LOWMEDIUM: "lowmedium",
+            Complexity.MEDIUM: "medium",
+            Complexity.MEDIUMHIGH: "mediumhigh",
+            Complexity.HIGH: "high"
+        }[self]
+
+    def get_loading_amout(self):
+        return {
+            Complexity.LOW: 0.3,
+            Complexity.LOWMEDIUM: 0.55,
+            Complexity.MEDIUM: 0.75,
+            Complexity.MEDIUMHIGH: 0.90,
+            Complexity.HIGH: 0.95
+        }[self]
+        
+with open(f'instance_generator/{args.filename}.pickle', 'rb') as f:
+    stats = pickle.load(f)
+
+
+# count the number of items
+count = 0
+for key in stats:
+    count += 1
+print(args.filename)
+print("Number of items: ", 3000)
+print('Accepted requests: ', count)
+print("Feasibility: ", count/3000)
+
+apps = {}
+with open(f'instance_generator/rquests_wifiToWifi.json', mode='r') as f_requests:
+    requests = json.load(f_requests)
+    for req in requests:
+        apps[req["id"]] = req["name"]
+
+app_delay = {}
+app_jitter = {}
+
+with open(f'instance_generator/{args.filename}.csv', mode='w') as file:
+    writer = csv.writer(file)
+    writer.writerow(['instance', 'app', "pre_processing", "solving_time", "delay", "jitter", "cumulative_max_delay", "cumulative_max_jitter", "cumulative_max_delay_app", "cumulative_max_jitter_app"])
+    for stat in stats:
+        pre_processing = stats[stat]["pre_processing_time"][0] + stats[stat]["pre_processing_time"][1] * 10**-6
+        solving_time = stats[stat]["solving_time"].total_seconds()
+        sys_maxdelay = max(stats[stat]["delays"].values()) / 10**3
+        sys_maxjitter = max(stats[stat]["jitter"].values()) / 10**3
+        delay = 0
+        for k,v in stats[stat]["delays"].items():
+            if stat == k[0]:
+                if delay < v:   
+                    delay = v / 10**3
+        jitter = 0
+        for k,v in stats[stat]["jitter"].items():
+            if stat == k:
+                if jitter < v:   
+                    jitter = v / 10**3
+
+        app = apps[stat]
+        
+        if app not in app_delay:
+            app_delay[app] = delay
+        else:
+            if app_delay[app] < delay:
+                app_delay[app] = delay
+        
+        if app not in app_jitter:
+            app_jitter[app] = jitter
+        else:
+            if app_jitter[app] < jitter:
+                app_jitter[app] = jitter
+
+        writer.writerow([stat, app, pre_processing,  solving_time, delay, jitter, sys_maxdelay, sys_maxjitter, app_delay[app], app_jitter[app]])
+

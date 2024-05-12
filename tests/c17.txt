@@ -1,0 +1,38 @@
+Flow 1_11 scheduled at interface 1 at timeslot 10
+Flow 1_1 scheduled at interface 3 at timeslot 1
+Flow 2_1 scheduled at interface 3 at timeslot 3
+Flow 1_3 scheduled at interface 3 at timeslot 4
+Flow 2_1 scheduled at interface 3 at timeslot 4
+Flow 2_1 scheduled at interface 3 at timeslot 5
+Flow 1_9 scheduled at interface 3 at timeslot 6
+Flow 2_1 scheduled at interface 3 at timeslot 6
+Flow 2_1 scheduled at interface 3 at timeslot 7
+Flow 2_1 scheduled at interface 3 at timeslot 8
+Flow 2_1 scheduled at interface 3 at timeslot 9
+Flow 1_11 scheduled at interface 3 at timeslot 11
+Flow 2_3 scheduled at interface 3 at timeslot 12
+Flow 1_16 scheduled at interface 3 at timeslot 13
+Flow 1_15 scheduled at interface 3 at timeslot 15
+Flow 1_14 scheduled at interface 3 at timeslot 16
+Delay for flow 1_1 is 64.0
+Delay for flow 1_2 is 64.0
+Delay for flow 1_3 is 360.0
+Delay for flow 1_4 is 64.0
+Delay for flow 1_5 is 64.0
+Delay for flow 1_6 is 64.0
+Delay for flow 1_7 is 64.0
+Delay for flow 1_8 is 64.0
+Delay for flow 1_9 is 64.0
+Delay for flow 1_10 is 64.0
+Delay for flow 1_11 is 64.0
+Delay for flow 1_12 is 64.0
+Delay for flow 1_13 is 64.0
+Delay for flow 1_14 is 64.0
+Delay for flow 1_15 is 64.0
+Delay for flow 1_16 is 64.0
+Jitter for flow 1 is 0.0
+Delay for flow 2_1 is 2112.0
+Delay for flow 2_2 is 2112.0
+Delay for flow 2_3 is 2112.0
+Delay for flow 2_4 is 2112.0
+Jitter for flow 2 is 0.0

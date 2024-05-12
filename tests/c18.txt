@@ -1,0 +1,14 @@
+Flow 1_1 scheduled at interface 1 at timeslot 2
+Flow 1_1 scheduled at interface 2 at timeslot 4
+Flow 2_1 scheduled at interface 3 at timeslot 1
+Flow 2_2 scheduled at interface 3 at timeslot 5
+Flow 1_1 scheduled at interface 3 at timeslot 7
+Flow 2_3 scheduled at interface 3 at timeslot 9
+Flow 2_4 scheduled at interface 3 at timeslot 14
+Delay for flow 1_1 is 417.04727
+Jitter for flow 1 is 0.0
+Delay for flow 2_1 is 59.578182
+Delay for flow 2_2 is 41.890909
+Delay for flow 2_3 is 24.203636
+Delay for flow 2_4 is 66.094545
+Jitter for flow 2 is 41.890909

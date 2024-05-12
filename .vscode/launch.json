@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "python": ".venv/bin/python",
+            "args": [
+                "-n", "network_fast.json",
+                "-f","fast_wifidc",
+                "-r", "rquests_wifiToDC.json"
+            ]
+        },
+        {
+            "name": "Python Debugger: STATS",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "python": ".venv/bin/python",
+            "args": [
+                "-f","out_fast_wifidc",
+            ]
+        }
+
+    ]
+}
