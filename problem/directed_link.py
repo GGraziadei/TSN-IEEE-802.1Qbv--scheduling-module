@@ -58,7 +58,8 @@ class DirectedLink:
         self.T_e[t-1] = True
         
     def remove_t(self, t):
-        self.T_e[t-1] = False
+        if 1 <= t <= len(self.T_e):
+            self.T_e[t-1] = False
 
     def get_a_e(self):
         return self.a_e
