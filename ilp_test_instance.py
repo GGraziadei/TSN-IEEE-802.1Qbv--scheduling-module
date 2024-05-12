@@ -53,7 +53,7 @@ with open(f'{folder}/network.json', 'r') as network_file:
             instance.network.flows = [flow]
             instance.pre_processing()
             result = instance.solve()
-            if result['status'] != 'Infeasible':
+            if result['status']:
                 stat = instance.stat()
                 stat["delay"] = instance.d
                 stat["jitter"] = instance.j

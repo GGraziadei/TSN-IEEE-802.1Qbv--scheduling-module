@@ -135,7 +135,7 @@ class GurobiILP(ILP):
         self.objective = prob.getObjective().getValue()
 
         return {
-            "status": prob.status, 
+            "status": True, 
             "objective": self.objective,
         }
     
