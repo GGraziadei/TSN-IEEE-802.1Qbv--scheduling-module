@@ -1,0 +1,10 @@
+# python gitignore
+# Created by https://www.gitignore.io/api/python
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+problem/__pycache__/*
+*.py[cod]
+*$py.class
+instance_generator/*.pickle
+instance_generator/*.bin
