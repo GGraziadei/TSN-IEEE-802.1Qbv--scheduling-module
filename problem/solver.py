@@ -183,7 +183,7 @@ class TSNScheduling:
         ax.set_ylabel('Link')
         ax.set_title('T scheduling - Gantt Chart')
         ax.invert_yaxis()
-        ax.xaxis.set_major_locator(matplotlib.ticker.MultipleLocator(base=1))
+        #ax.xaxis.set_major_locator(matplotlib.ticker.MultipleLocator(base=1))
         ax.grid(which='major', axis='x', linestyle='-')
     
         

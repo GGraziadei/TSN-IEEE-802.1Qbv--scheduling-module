@@ -77,6 +77,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
                 stats[flow.get_id()] = instance.stat()
                 stats[flow.get_id()]["delays"]=copy.deepcopy(instance.d_fi)
                 stats[flow.get_id()]["jitter"]=copy.deepcopy(instance.j_f)
+                stats[flow.get_id()]["app"] = request["name"]
                 #stats[flow.get_id()]["plan"]=copy.deepcopy(instance.x_feti)
             count += 1
             

@@ -31,7 +31,6 @@ ax.plot(n_requests, solving_time, label='solving time')
 ax.plot(n_requests, pre_processing_time, label='pre processing time')
 ax.legend()
 
-    
 
 plt.xlabel('Number of requests')
 plt.ylabel('Time (s)')
@@ -70,6 +69,11 @@ app2_n_requests = range(1, len(app2_requests) + 1)
 
 app1_delay = [float(row['delay']) for row in app1_requests]
 app2_delay = [float(row['delay']) for row in app2_requests]
+app1_solving_time = [float(row['solving_time']) for row in app1_requests]
+app2_solving_time = [float(row['solving_time']) for row in app2_requests]
+app1_pre_processing_time = [float(row['pre_processing']) for row in app1_requests]
+app2_pre_processing_time = [float(row['pre_processing']) for row in app2_requests]
+
 app1_jitter = [float(row['jitter']) for row in app1_requests]
 app2_jitter = [float(row['jitter']) for row in app2_requests]
 app1_cumulative_delay = [float(row['cumulative_max_delay_app']) for row in app1_requests]
@@ -115,4 +119,19 @@ plt.ylabel('Time (us)')
 plt.show()
 
 
+# boxplot with solving time
+fig, ax = plt.subplots()
+ax.boxplot([app1_solving_time, app2_solving_time, app1_pre_processing_time, app2_pre_processing_time])
+plt.xticks([1, 2,3,4], ['App1 Solving', 'App2 Solving', 'App1 Pre Processing', 'App2 Pre Processing'])
+plt.ylabel('Solving time (s)')
+plt.show()
 
+# solving time per app
+fig, ax = plt.subplots()
+ax.plot(app1_n_requests, app1_solving_time, label='App1 Solving time')
+ax.plot(app2_n_requests, app2_solving_time, label='App2 Solving time')
+plt.legend()
+
+plt.xlabel('Number of requests')
+plt.ylabel('Time (s)')
+plt.show()

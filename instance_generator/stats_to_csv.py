@@ -50,7 +50,7 @@ class Complexity(Enum):
             Complexity.HIGH: 0.95
         }[self]
         
-with open(f'instance_generator/{args.filename}.pickle', 'rb') as f:
+with open(f'{args.filename}.pickle', 'rb') as f:
     stats = pickle.load(f)
 
 
@@ -72,7 +72,7 @@ with open(f'instance_generator/rquests_wifiToWifi.json', mode='r') as f_requests
 app_delay = {}
 app_jitter = {}
 
-with open(f'instance_generator/{args.filename}.csv', mode='w') as file:
+with open(f'{args.filename}.csv', mode='w') as file:
     writer = csv.writer(file)
     writer.writerow(['instance', 'app', "pre_processing", "solving_time", "delay", "jitter", "cumulative_max_delay", "cumulative_max_jitter", "cumulative_max_delay_app", "cumulative_max_jitter_app"])
     for stat in stats:

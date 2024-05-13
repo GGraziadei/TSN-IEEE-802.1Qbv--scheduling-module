@@ -14,14 +14,7 @@ with open('tests/scenario8.json', 'r') as f:
     # constructive solution
     instance = Greedy(network_parameeter=data)
     instance.pre_processing()
-    instance.network.get_link_by_id(1).remove_t(1)
-    instance.network.get_link_by_id(1).remove_t(2)
-    instance.network.get_link_by_id(1).remove_t(3)
-    instance.network.get_link_by_id(1).remove_t(5)
-    instance.network.get_link_by_id(1).remove_t(7)
-    instance.network.get_link_by_id(1).remove_t(8)
-    instance.network.get_link_by_id(1).remove_t(10)
-    instance.network.get_link_by_id(1).remove_t(21)
+
 
     sol = instance.solve()
 
@@ -30,7 +23,7 @@ with open('tests/scenario8.json', 'r') as f:
         d = max(instance.d_fi.values())
         print("---",SOLVER,"---")
         print("Constructive solution with maximum jitter", j, "maximum delay", d)
-        instance.ls()
+        #instance.ls()
 
 
 
@@ -155,7 +148,7 @@ with open('tests/scenario8.json', 'r') as f:
 
         """
 
-        #instance.generate_gantt()
+        instance.generate_gantt()
         #print(instance.network.links_stats())
 
     else:

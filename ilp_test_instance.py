@@ -58,7 +58,8 @@ with open(f'{folder}/network.json', 'r') as network_file:
                 stat["delay"] = instance.d
                 stat["jitter"] = instance.j
                 stat['id'] = flow.get_id()
-                stats[flow.get_id()] = stat
+                stat['app'] = request["name"]
+                stats[request["id"]] = stat
           
 # save stats in pickle file
 import pickle
