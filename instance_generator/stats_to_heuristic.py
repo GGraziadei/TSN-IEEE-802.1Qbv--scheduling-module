@@ -2,7 +2,6 @@
 
 from enum import Enum
 import json
-from math import ceil
 import pickle
 import csv
 
@@ -11,10 +10,9 @@ from argparse import ArgumentParser
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 parser = ArgumentParser()
 parser.add_argument("-f", "--filename", dest="filename", help="Output filename.", required=True)
-parser.add_argument("-r", "--requests", dest="requests", help="Requests filename.", required=True)
-parser.add_argument("-n", "--network", dest="network", help="Network filename.", required=True)
 
 args = parser.parse_args()
 
@@ -61,32 +59,22 @@ count = 0
 for key in stats:
     count += 1
 print(args.filename)
-print("Number of items: ", 3000)
+print("Number of items: ", 10)
 print('Accepted requests: ', count)
-print("Feasibility: ", count/3000)
+print("Feasibility: ", count/10)
 
-troughput_traffic = {}
-size_network = {}
-troughput_network = {}
-with open(f'{args.network}.json', mode='r') as f_network:
-    network = json.load(f_network)
-    for idx,a_e in enumerate(network["a_e"]):
-        size_network[idx + 1] = a_e
+# remove the last word
+instance = args.filename.split("/")
+#instance = instance[0:len(instance)-2]
+# join the words
+instance = "/".join(instance[0:len(instance)-1])
+print("Instance: ", instance)
 
 apps = {}
-with open(f'{args.requests}.json', mode='r') as f_requests:
+with open(f'{instance}/requests.json', mode='r') as f_requests:
     requests = json.load(f_requests)
     for req in requests:
         apps[req["id"]] = req["name"]
-        for e in req["path"]:
-            if not e in troughput_traffic:
-                troughput_traffic[e] = 0
-            if not e in troughput_network:
-                troughput_network[e] = 0
-            troughput_traffic[e] += req["size"]
-            size = size_network[e]
-            w_fe = ceil(req["size"] / size)
-            troughput_network[e] += w_fe * size
 
 app_delay = {}
 app_jitter = {}
@@ -131,13 +119,5 @@ with open(f'{args.filename}.csv', mode='w') as file:
 
         writer.writerow([stat, app, pre_processing,  solving_time, delay, jitter, sys_maxdelay, sys_maxjitter, app_delay[app], app_jitter[app]])
 
-print("Average pre_processing time: ", pre_processing_average/count)
-print("Average solving time: ", solving_time_average/count)
-
-with open(f'{args.filename}_troughput.csv', mode='w') as file:
-    writer = csv.writer(file)
-    writer.writerow(['interface', "traffic_troughput", "network_troughput", "waste_troughput"])
-    # sort by troughput
-    troughput_traffic = {k: v for k, v in sorted(troughput_traffic.items(), key=lambda item: item[1], reverse=True)}
-    for id in troughput_traffic:
-        writer.writerow([id, troughput_traffic[id] / 10**3, troughput_network[id] / 10**3, 100 * (troughput_network[id] - troughput_traffic[id]) / troughput_network[id] ])
+print("Average pre_processing time: ", pre_processing_average/10)
+print("Average solving time: ", solving_time_average/10)

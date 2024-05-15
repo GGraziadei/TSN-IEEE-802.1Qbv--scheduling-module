@@ -22,7 +22,7 @@
             "console": "integratedTerminal",
             "python": ".venv/bin/python",
             "args": [
-                "-f","instance_generator/instances/instance_1/out_heuristic",
+                "-f","instance_generator/instances/instance_1/out_heuristic"
             ]
         }
 
