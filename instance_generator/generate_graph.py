@@ -44,7 +44,7 @@ app1_n_requests = range(1, len(app1_requests) + 1)
 app2_requests = [row for row in data if row['app'] == 'App2']
 app2_n_requests = range(1, len(app2_requests) + 1)
 
-app1_delay = [float(row['delay']) for row in app1_requests]
+app1_delay = [min(float(row['delay']),1*10**6) for row in app1_requests]
 app2_delay = [float(row['delay']) for row in app2_requests]
 app1_solving_time = [float(row['solving_time']) for row in app1_requests]
 app2_solving_time = [float(row['solving_time']) for row in app2_requests]
@@ -53,7 +53,7 @@ app2_pre_processing_time = [float(row['pre_processing']) for row in app2_request
 
 app1_jitter = [float(row['jitter']) for row in app1_requests]
 app2_jitter = [float(row['jitter']) for row in app2_requests]
-app1_cumulative_delay = [float(row['cumulative_max_delay_app']) for row in app1_requests]
+app1_cumulative_delay = [min(float(row['cumulative_max_delay_app']),1*10**6) for row in app1_requests]
 app2_cumulative_delay = [float(row['cumulative_max_delay_app']) for row in app2_requests]
 app1_cumulative_jitter = [float(row['cumulative_max_jitter_app']) for row in app1_requests]
 app2_cumulative_jitter = [float(row['cumulative_max_jitter_app']) for row in app2_requests]
@@ -90,12 +90,12 @@ ax[0].plot(n_requests, cumulative_delay, label='cumulative max delay')
 ax[0].plot(n_requests, cumulative_jitter, label='cumulative max jitter')
 ax[0].legend()
 ax[0].set_xlabel('Number of requests')
-ax[0].set_ylabel('Time (us)')
+ax[0].set_ylabel('Time (ns)')
 ax[0].set_title('Cumulative maximum delay and jitter of network')
 
 ax[1].boxplot([app1_delay, app2_delay, app1_jitter, app2_jitter])
 ax[1].set_xticks([1, 2, 3, 4], ['App1 delay', 'App2 delay', 'App1 jitter', 'App2 jitter'])
-ax[1].set_ylabel('Delay (us)')
+ax[1].set_ylabel('Delay (ns)')
 ax[1].set_title('Delay and jitter of apps variance distribution')
 plt.savefig(f'instance_generator/graphs/{args.filename}/cumulative.png')
 
@@ -105,28 +105,28 @@ ax[0,0].plot(app1_n_requests, app1_delay, label='App1 delay')
 ax[0,0].plot(app1_n_requests, app1_jitter, label='App1 jitter')
 ax[0,0].legend()
 ax[0,0].set_xlabel('Number of requests')
-ax[0,0].set_ylabel('Time (us)')
+ax[0,0].set_ylabel('Time (ns)')
 ax[0,0].set_title('Delay and jitter of App1')
 
 ax[1,0].plot(app1_n_requests, app1_cumulative_delay, label='App1 cumulative max delay')
 ax[1,0].plot(app1_n_requests, app1_cumulative_jitter, label='App1 cumulative max jitter')
 ax[1,0].legend()
 ax[1,0].set_xlabel('Number of requests')
-ax[1,0].set_ylabel('Time (us)')
+ax[1,0].set_ylabel('Time (ns)')
 ax[1,0].set_title('Cumulative maximum delay and jitter of App1')
 
 ax[0,1].plot(app2_n_requests, app2_delay, label='App2 delay')
 ax[0,1].plot(app2_n_requests, app2_jitter, label='App2 jitter')
 ax[0,1].legend()
 ax[0,1].set_xlabel('Number of requests')
-ax[0,1].set_ylabel('Time (us)')
+ax[0,1].set_ylabel('Time (ns)')
 ax[0,1].set_title('Delay and jitter of App2')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_delay, label='App2 cumulative max delay')
 ax[1,1].plot(app2_n_requests, app2_cumulative_jitter, label='App2 cumulative max jitter')
 ax[1,1].legend()
 ax[1,1].set_xlabel('Number of requests')
-ax[1,1].set_ylabel('Time (us)')
+ax[1,1].set_ylabel('Time (ns)')
 ax[1,1].set_title('Cumulativ emaximum delay and jitter of App2')
 
 plt.savefig(f'instance_generator/graphs/{args.filename}/kpi.png')
