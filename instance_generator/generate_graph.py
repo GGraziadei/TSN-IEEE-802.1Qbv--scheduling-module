@@ -80,7 +80,7 @@ ax.legend()
 #ax.set_yscale('log')
 ax.set_xlabel('Number of requests')
 ax.set_ylabel('Time (s)')
-
+plt.tight_layout()
 plt.savefig(f'instance_generator/graphs/{args.filename}/time.png')
 
 #GRAPH 2 - cumulative delay/jitter - boxplot
@@ -97,6 +97,7 @@ ax[1].boxplot([app1_delay, app2_delay, app1_jitter, app2_jitter])
 ax[1].set_xticks([1, 2, 3, 4], ['App1 delay', 'App2 delay', 'App1 jitter', 'App2 jitter'])
 ax[1].set_ylabel('Delay (ns)')
 ax[1].set_title('Delay and jitter of apps variance distribution')
+plt.tight_layout()
 plt.savefig(f'instance_generator/graphs/{args.filename}/cumulative.png')
 
 # GRAPH 3 - KPI 
@@ -128,5 +129,5 @@ ax[1,1].legend()
 ax[1,1].set_xlabel('Number of requests')
 ax[1,1].set_ylabel('Time (ns)')
 ax[1,1].set_title('Cumulativ emaximum delay and jitter of App2')
-
+plt.tight_layout()
 plt.savefig(f'instance_generator/graphs/{args.filename}/kpi.png')
