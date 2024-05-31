@@ -144,12 +144,12 @@ PATHS  = dict(nx.all_pairs_shortest_path(network.G))
 for id in range(1, int(args.number) + 1):
     path = network.random_path(src_list=ue_src, dest_list=dest, paths=PATHS, debug=False)
     print(path)
-    size = random.randint(80, 120)
+    size = random.randint(int(args.size), int(args.size) + 30)
 
     if random.random() < 0.5:
         app = Application(f"App_1", duration/10, delay=duration/10, jitter=duration/100, path=path, size=size)
     else:
-        app = Application(f"App_2", duration, delay=duration, jitter=duration/10, path=path, size=size)
+        app = Application(f"App_2", duration, delay=duration, jitter=duration/10, path=path, size=size*10)
     app.id = id
     requests.append(app)
 
