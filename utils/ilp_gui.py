@@ -2,7 +2,7 @@
 from pulp import *
 import json
 from problem.milp_model import ILP
-from problem.gurobi_ilp import GurobiILP
+from problem.gurobi_ilp_reconfiguration import GurobiILP
 
 with open('tests/scenario8.json') as f:
     data = json.load(f)
@@ -12,13 +12,13 @@ with open('tests/scenario8.json') as f:
     
     if instance.is_apriori_feasible():
         if instance.solve()["status"] != "Infeasible":
-            eti,i,etk = instance.space()
+            
             #instance.post_processing()
             stat =  instance.stat()
             print(stat)
             
 
-            instance.generate_gantt()
+            #instance.generate_gantt()
             
             """
             instance.export_results("results")
