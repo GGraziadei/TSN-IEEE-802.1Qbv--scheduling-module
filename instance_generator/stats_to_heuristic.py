@@ -59,9 +59,9 @@ count = 0
 for key in stats:
     count += 1
 print(args.filename)
-print("Number of items: ", 10)
+print("Number of items: ", 3000)
 print('Accepted requests: ', count)
-print("Feasibility: ", count/10)
+print("Feasibility: ", count/3000)
 
 # remove the last word
 instance = args.filename.split("/")
