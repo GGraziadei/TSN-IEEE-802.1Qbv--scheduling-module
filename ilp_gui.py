@@ -2,7 +2,7 @@
 from pulp import *
 import json
 from problem.milp_model import ILP
-from problem.gurobi_ilp_reconfiguration import GurobiILP
+from problem.gurobi_ilp import GurobiILP
 
 with open('tests/scenario8.json') as f:
     data = json.load(f)
@@ -18,7 +18,7 @@ with open('tests/scenario8.json') as f:
             print(stat)
             
 
-            #instance.generate_gantt()
+            instance.generate_gantt()
             
             """
             instance.export_results("results")

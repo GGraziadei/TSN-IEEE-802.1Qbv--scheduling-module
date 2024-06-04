@@ -29,7 +29,7 @@ with open(f'{args.filename}.csv', 'r') as f:
     plt.ylabel("troughput (Kbitps)")
     plt.xlabel("Interface_id")
     plt.yscale('log')
-    plt.legend(["Network Troughput", "Signal Traffic Troughput", "Wasted Troughput % "])
+    plt.legend(["Network Troughput", "Signal Traffic Troughput", "Wasted Troughput"])
     
     # write all the tick to x
     
@@ -40,6 +40,7 @@ with open(f'{args.filename}.csv', 'r') as f:
 
     # add a box in red for the first 3 interfaces
     plt.axvspan(-1, 3, color='green', alpha=0.2)
-    plt.text(0, 1000, "Optical interfaces", fontsize=12, color='green')
+    plt.text(0, 1000, "Transport network", fontsize=12, color='green')
 
+    plt.tight_layout()
     plt.show()

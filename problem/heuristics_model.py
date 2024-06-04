@@ -94,12 +94,15 @@ class Heuristics(TSNScheduling):
                 candidate.append((e_id, t))
                 t_prev = (t -1) * self.network.get_link_by_id(e_id).get_tau_e()
                 d_e_last = self.network.get_link_by_id(e_id).get_d_e()
+                if delay + d_e_last > max_d: return None
+                
             else: continue
         
         if len(candidate) == len(flow["flow"].get_E_f()):
+            
             delay += d_e_last            
             last_i, last_t = flow["flow"].get_last_t()
-
+            
             new_jitter = 0
             if last_i:
                 old_max_delay = flow["flow"].get_max_delay()
