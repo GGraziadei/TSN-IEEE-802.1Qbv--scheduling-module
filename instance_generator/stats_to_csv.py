@@ -20,9 +20,9 @@ parser.add_argument("-n", "--network", dest="network", help="Network filename.",
 args = parser.parse_args()
 
 if not args.requests:
-    args.requests = path.dirname(args.filename) + "/requests.json"
+    args.requests = path.dirname(args.filename) + "/requests"
 if not args.network:
-    args.network = path.dirname(args.filename) + "/network.json"
+    args.network = path.dirname(args.filename) + "/network"
 
 class Complexity(Enum):
     LOW = 1
