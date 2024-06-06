@@ -1,10 +1,13 @@
 #!/bin/bash
 echo "Validation script..."
 
-python3 validation_heuristic.py -i instance_generator/instances/wifi2wifi_express/ &
-python3 validation_heuristic.py -i instance_generator/instances/wifi2wifi_storeAndForward/ &
-python3 validation_heuristic.py -i instance_generator/instances/wifi2dc_express/ &
-python3 validation_heuristic.py -i instance_generator/instances/wifi2dc_storeAndForward/ &
+# for all instances in input
+for var in $@
+do
+    echo "$var Instance started"
+    python3 validation_heuristic.py -i "instance_generator/instances/$var/" &
+
+done
 
 # Wait for all tasks to complete
 wait

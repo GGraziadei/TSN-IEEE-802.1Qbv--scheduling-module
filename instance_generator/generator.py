@@ -17,6 +17,9 @@ parser.add_argument("-s", "--size", dest="size", help="Min size of the requests 
 parser.add_argument("-speed", "--speed", dest="speed", help="Speed of interfaces", required=False)
 parser.add_argument("-n", "--number", dest="number", help="Number of requests", required=True)
 
+parser.add_argument("-os", "--opticalsize", dest="opticalsize", help="Size of the optical interface", required=False)
+parser.add_argument("-rs", "--radiosize", dest="radiosize", help="Size of the radio interface", required=False)
+
 # python3 instance_generator/generator.py -pm storeAndForward -t 100 -p wifi -s 80
 args = parser.parse_args()
 
@@ -44,7 +47,7 @@ class Netowrk:
         if not self.G.has_node(node2):
             self.add_node(node2)
         interface_id = len(self.G.edges) + 1
-        tau_e = a_e * 8 *  10**6 / throughput
+        tau_e = a_e * 8 *  10**9 / throughput
         self.G.add_edge(node1, node2,id=interface_id, layer2=layer2, processing_mode=processing_mode, throughput=throughput, a_e=a_e, tau_e=tau_e, d_e=d_e)
 
     def random_path(self, debug=False, paths=[], src_list = [], dest_list = []):
@@ -112,10 +115,10 @@ duration = int(args.duration) # us
 # fixed values
 optical_throughput =  10 * 10**9 if args.speed == None else int(args.speed) * 10 # 10 Gbps
 optical_delay = duration/100 # 100 us 1% of the duration of the SF
-optical_size = 1 # 1 byte
+optical_size = 1 if args.opticalsize == None else int(args.opticalsize)  # 1 byte
 radio_throughput = 48 * 10**6 if args.speed == None else int(args.speed) * 1# Mbps
-radio_delay = 4 # us
-radio_size = 24 #  byte
+radio_delay = 4000 # us
+radio_size = 24 if args.radiosize == None else int(args.radiosize) #  byte
 
 network.add_edge("DC1", "DC2", "optical", processing_mode, optical_throughput, optical_size, optical_delay)
 network.add_edge("DC2", "DC3", "optical", processing_mode, optical_throughput, optical_size, optical_delay)
