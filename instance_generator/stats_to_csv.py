@@ -146,4 +146,4 @@ with open(f'{args.filename}_troughput.csv', mode='w') as file:
     # sort by troughput
     troughput_traffic = {k: v for k, v in sorted(troughput_traffic.items(), key=lambda item: item[1], reverse=True)}
     for id in troughput_traffic:
-        writer.writerow([id, troughput_traffic[id] / 10**3, troughput_network[id] / 10**3, 100 * (troughput_network[id] - troughput_traffic[id]) / troughput_network[id] ])
+        writer.writerow([id, troughput_traffic[id] * 8 / 10**3, troughput_network[id] * 8 / 10**3, 100 * (troughput_network[id] - troughput_traffic[id]) / troughput_network[id] ])
