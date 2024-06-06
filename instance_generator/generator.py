@@ -149,11 +149,16 @@ for id in range(1, int(args.number) + 1):
     print(path)
     size = random.randint(int(args.size), int(args.size) + 30)
 
-    if int(args.app) == 1 or random.random() < 0.5:
+    if int(args.app) == 1:
         app = Application(f"App_1", duration/10, delay=duration/10, jitter=duration/100, path=path, size=size)
-    else:
+    elif int(args.app) == 2:
         app = Application(f"App_2", duration, delay=duration, jitter=duration/10, path=path, size=size*10)
-    
+    else:
+        if random.random() < 0.5:
+            app = Application(f"App_1", duration/10, delay=duration/10, jitter=duration/100, path=path, size=size)
+        else:
+            app = Application(f"App_2", duration, delay=duration, jitter=duration/10, path=path, size=size*10)
+        
     
     app.id = id
     requests.append(app)

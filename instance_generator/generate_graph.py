@@ -97,7 +97,7 @@ app1_max_jitter = 0
 app2_max_jitter = 0
 cumlative_requests = {}
 for row in data:
-    if row['app'] == 'App1':
+    if row['app'] == 'App_1':
         if float(row['delay']) > app1_max_delay:
             app1_max_delay = float(row['delay'])
         if float(row['jitter']) > app1_max_jitter:
