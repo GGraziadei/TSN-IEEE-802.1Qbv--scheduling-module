@@ -21,6 +21,8 @@ with open(f'instance_generator/{args.filename}.csv', 'r') as f:
 
 from os import path
 
+args.filename = args.filename.replace('/', '_')   
+
 if not path.exists(f'instance_generator/graphs/{args.filename}'):
     from os import makedirs
     makedirs(f'instance_generator/graphs/{args.filename}')
@@ -54,9 +56,9 @@ cumulative_jitter = [float(row['cumulative_max_jitter']) for row in data]
 
 
 # get request per app 
-app1_requests = [row for row in data if row['app'] == 'App1']
+app1_requests = [row for row in data if row['app'] == 'App_1']
 app1_n_requests = range(1, len(app1_requests) + 1)
-app2_requests = [row for row in data if row['app'] == 'App2']
+app2_requests = [row for row in data if row['app'] == 'App_2']
 app2_n_requests = range(1, len(app2_requests) + 1)
 app2_delay = [float(row['delay']) for row in app2_requests]
 app1_delay = [min(float(row['delay']),1*10**6) for row in app1_requests]
@@ -141,6 +143,8 @@ ax.plot(app2_n_requests, app2_solving_time, label='App2 Solving time')
 ax.plot(app1_n_requests, app1_pre_processing_time, label='App1 Pre processing time')
 ax.plot(app2_n_requests, app2_pre_processing_time, label='App2 Pre processing time')
 
+assert len(app1_n_requests) == len(app1_solving_time)
+assert len(app2_n_requests) == len(app2_solving_time)
 # interpolate the data
 app1_solving_time_linear = np.polyfit(app1_n_requests, app1_solving_time, 3)
 app2_solving_time_linear = np.polyfit(app2_n_requests, app2_solving_time, 3)

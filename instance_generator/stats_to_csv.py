@@ -3,6 +3,7 @@
 from enum import Enum
 import json
 from math import ceil
+from os import path
 import pickle
 import csv
 
@@ -13,10 +14,15 @@ import numpy as np
 
 parser = ArgumentParser()
 parser.add_argument("-f", "--filename", dest="filename", help="Output filename.", required=True)
-parser.add_argument("-r", "--requests", dest="requests", help="Requests filename.", required=True)
-parser.add_argument("-n", "--network", dest="network", help="Network filename.", required=True)
+parser.add_argument("-r", "--requests", dest="requests", help="Requests filename.", required=False)
+parser.add_argument("-n", "--network", dest="network", help="Network filename.", required=False)
 
 args = parser.parse_args()
+
+if not args.requests:
+    args.requests = path.dirname(args.filename) + "/requests.json"
+if not args.network:
+    args.network = path.dirname(args.filename) + "/network.json"
 
 class Complexity(Enum):
     LOW = 1
