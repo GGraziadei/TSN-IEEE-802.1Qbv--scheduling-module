@@ -1,0 +1,6 @@
+instance_generator/instances/instance_T515/out_heuristic
+Number of items:  3000
+Accepted requests:  2061
+Feasibility:  0.687
+Average pre_processing time:  0.16001799999999747
+Average solving time:  0.597854333818536
