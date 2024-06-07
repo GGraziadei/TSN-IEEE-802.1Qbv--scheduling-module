@@ -1,6 +1,6 @@
 [
     {
-        "period": 10.0, 
+        "period": 20000.0, 
         "delay": 1000000.0, 
         "jitter": 100000.0, 
         "name": "App_1",
