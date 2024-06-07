@@ -4,3 +4,9 @@ Accepted requests:  2065
 Feasibility:  0.6883333333333334
 Average pre_processing time:  0.19402500000000686
 Average solving time:  0.2898475365617432
+instance_generator/instances/instance_C2/out_heuristic
+Number of items:  3000
+Accepted requests:  2065
+Feasibility:  0.6883333333333334
+Average pre_processing time:  0.19402500000000686
+Average solving time:  0.2898475365617432
