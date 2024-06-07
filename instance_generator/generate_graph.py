@@ -37,7 +37,7 @@ for row in data:
     row['cumulative_max_delay_app'] = float(row['cumulative_max_delay_app']) / 10**6
     row['cumulative_max_jitter_app'] = float(row['cumulative_max_jitter_app']) / 10**6
 
-    if row['app'] == 'App1':
+    if row['app'] == 'App_1':
         row['cumulative_max_delay'] = min(1, row['cumulative_max_delay'])
         row['delay'] = min(1, row['delay'])
 
