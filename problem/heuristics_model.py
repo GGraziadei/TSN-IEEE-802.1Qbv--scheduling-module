@@ -61,6 +61,10 @@ class Heuristics(TSNScheduling):
             tau_e_dest = self.network.get_link_by_id(e_dest).get_tau_e()
             sigma = self.pipeline(e_src,e_dest,flow_id=flow["flow"].get_id())
             t_min = ceil(((t_min-1) * tau_e_src + sigma) / tau_e_dest) + 1
+
+            t_e = self.network.get_link_by_id(e_src).get_t_e()
+            if t_min > t_e:
+                t_min = t_min - t_e
         
         d_e_last = self.network.get_link_by_id(e_src).get_d_e()
             
@@ -74,7 +78,8 @@ class Heuristics(TSNScheduling):
                 # the max_d value is the maximum delay admitted according to balance the jitter
                 t_complement = (t-1) * self.network.get_link_by_id(e_id).get_tau_e()
                 if t_complement > t_prev: delay += (t_complement - t_prev)
-                else: delay += (t_complement + self.network.T - t_prev)
+                else: 
+                    delay += (t_complement + self.network.T - t_prev)
 
                 # if the constraint is violated reject the candidate
                 if  delay > max_d:
@@ -86,10 +91,10 @@ class Heuristics(TSNScheduling):
                     tau_e_src = self.network.get_link_by_id(e_id).get_tau_e()
                     sigma = self.pipeline(e_id,e_dest,flow_id=flow["flow"].get_id())
                     t_min = ceil(((t_min-1) * tau_e_src + sigma) / tau_e_dest) + 1
-
-                if t_min > len(self.network.get_link_by_id(e_id).get_T_e()):
-                    # circular buffer optimization
-                    t_min = 1
+                    t_e = self.network.get_link_by_id(e_id).get_t_e()
+                    if t_min > t_e:
+                        t_min = t_min - t_e
+            
 
                 candidate.append((e_id, t))
                 t_prev = (t -1) * self.network.get_link_by_id(e_id).get_tau_e()
