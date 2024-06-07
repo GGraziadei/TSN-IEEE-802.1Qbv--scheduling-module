@@ -203,7 +203,7 @@ class TSNScheduling:
         sigma = first_e2
 
         if link1.get_mode() == DirectedLink.TransmissionMode.STORE_AND_FORWARD:
-            return sigma + d
+            return sigma
 
         if link2.get_tau_e() <= h_12 * link1.get_tau_e():
             w_fe = flow.w_fe[e2]
