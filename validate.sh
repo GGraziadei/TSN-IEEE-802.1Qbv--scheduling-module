@@ -9,7 +9,7 @@ echo "Validation script..."
 for var in $@
 do
     echo "$var Instance started"
-    python3 validation_heuristic.py -i "instance_generator/instances/$var/" & >> "instance_generator/instances/$var/out.txt"
+    python3 validation_heuristic.py -i "instance_generator/instances/$var/"  >> "instance_generator/instances/$var/out.txt" &
 
 done
 
