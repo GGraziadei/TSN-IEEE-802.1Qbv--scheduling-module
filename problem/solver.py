@@ -196,14 +196,14 @@ class TSNScheduling:
         h_12 = self.h_ij[e1,e2]
         h_21 = self.h_ij[e2,e1]
         w_fe = flow.w_fe[e1]
-
+        d = link1.get_d_e() 
         last_e1 = w_fe * link1.get_tau_e()
         first_e2 = ceil(last_e1/link2.get_tau_e()) * link2.get_tau_e()
 
         sigma = first_e2
 
         if link1.get_mode() == DirectedLink.TransmissionMode.STORE_AND_FORWARD:
-            return sigma
+            return sigma + d
 
         if link2.get_tau_e() <= h_12 * link1.get_tau_e():
             w_fe = flow.w_fe[e2]
@@ -211,7 +211,7 @@ class TSNScheduling:
         else:
             sigma = ceil(link1.get_tau_e() / link2.get_tau_e()) * link2.get_tau_e()
 
-        d = link1.get_d_e() 
+        
         return sigma + d
 
     
