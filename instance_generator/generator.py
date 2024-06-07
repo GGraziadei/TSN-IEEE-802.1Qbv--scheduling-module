@@ -139,7 +139,7 @@ for i in range(1,201):
     #network.draw()
 
 ### Generate requests ###
-dc_dest = [f"UE_{i}" for i in range(401,801)]
+dc_dest = [f"UE_{i}" for i in range(401,601)]
 ue_dest = [f"UE_{i}" for i in range(201,401)]
 ue_src = [f"UE_{i}" for i in range(1,201)]
 
