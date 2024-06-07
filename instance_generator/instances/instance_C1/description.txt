@@ -1,6 +1,6 @@
-Processing mode: STORE_AND_FORWARD
+Processing mode: FAST
 Duration: 10000000 us
 Path generation mode: wifi2wifi
-Number of requests: 8000
+Number of requests: 3000
 Min size of the requests: 90 bytes
 Instance size: 2.537640625e+39

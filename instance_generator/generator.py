@@ -21,6 +21,8 @@ parser.add_argument("-os", "--opticalsize", dest="opticalsize", help="Size of th
 parser.add_argument("-rs", "--radiosize", dest="radiosize", help="Size of the radio interface", required=False)
 parser.add_argument("-a", "--application", dest="app", help="Application class", required=False)
 # python3 instance_generator/generator.py -pm storeAndForward -t 100 -p wifi -s 80
+parser.add_argument("-name", "--name", dest="name", help="Instance name", required=False)
+
 args = parser.parse_args()
 
 def grouped(iterable):
@@ -99,7 +101,8 @@ if not os.path.exists("instance_generator/instances/"):
 
 count_instances = len(os.listdir("instance_generator/instances/"))
 instance_id = count_instances + 1
-
+if args.name:
+    instance_id = args.name
 folder_name = f"instance_generator/instances/instance_{instance_id}"
 
 if not os.path.exists(folder_name):
