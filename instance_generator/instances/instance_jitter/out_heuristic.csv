@@ -1,2 +1,2 @@
 instance,app,pre_processing,solving_time,delay,jitter,cumulative_max_delay,cumulative_max_jitter,cumulative_max_delay_app,cumulative_max_jitter_app
-1,App_1,0.125686,0.374958,84000.0,4000.0,84000.0,4000.0,84000.0,4000.0
+1,App_1,0.148038,0.430044,325000.0,20000.0,325000.0,20000.0,325000.0,20000.0
