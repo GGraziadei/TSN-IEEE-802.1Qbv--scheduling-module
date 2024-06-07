@@ -11,7 +11,7 @@ args = parser.parse_args()
 import matplotlib.pyplot as plt
 import numpy as np
 
-with open(f'instance_generator/{args.filename}.csv', 'r') as f:
+with open(f'{args.filename}.csv', 'r') as f:
     # read the csv file, header is the first line, data is the rest, comma separated
     reader = csv.reader(f)
     header = next(reader)
