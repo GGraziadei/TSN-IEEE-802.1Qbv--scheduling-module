@@ -3,4 +3,4 @@ Duration: 10000000 us
 Path generation mode: wifi2dc
 Number of requests: 3000
 Min size of the requests: 90 bytes
-Instance size: 2.537640625e+39
+Instance size: 5.681390625e+39
