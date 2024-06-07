@@ -27,6 +27,9 @@ if not path.exists(f'instance_generator/graphs/{args.filename}'):
     from os import makedirs
     makedirs(f'instance_generator/graphs/{args.filename}')
 
+app2_delay = []
+app1_delay = []
+
 for row in data:
     row['pre_processing'] = float(row['pre_processing']) 
     row['solving_time'] = float(row['solving_time'])
@@ -38,8 +41,17 @@ for row in data:
     row['cumulative_max_jitter_app'] = float(row['cumulative_max_jitter_app']) / 10**6
 
     if row['app'] == 'App_1':
-        row['cumulative_max_delay'] = min(1, row['cumulative_max_delay'])
-        row['delay'] = min(1, row['delay'])
+        if row['cumulative_max_delay'] > 1:
+            row['cumulative_max_delay'] = 1
+
+        if row['delay'] > 1:
+            row['delay'] = 1
+            print('delay > 1')
+
+        app1_delay.append(row['delay'])
+    else:
+        app2_delay.append(row['delay'])
+
 
 # plot the data
 # x axis is the id
@@ -60,8 +72,7 @@ app1_requests = [row for row in data if row['app'] == 'App_1']
 app1_n_requests = range(1, len(app1_requests) + 1)
 app2_requests = [row for row in data if row['app'] == 'App_2']
 app2_n_requests = range(1, len(app2_requests) + 1)
-app2_delay = [float(row['delay']) for row in app2_requests]
-app1_delay = [min(float(row['delay']),1*10**6) for row in app1_requests]
+
 
 app1_delay_mean = []
 app1_delay_variance = []
