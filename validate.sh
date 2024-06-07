@@ -1,4 +1,8 @@
 #!/bin/bash
+
+echo "Update the repository..."
+git pull
+
 echo "Validation script..."
 
 # for all instances in input
@@ -17,8 +21,11 @@ do
     python3 instance_generator/generate_graph.py -f "instance_generator/instances/$var/out_heuristic"
 done
 
-
-
 # Wait for all tasks to complete
 wait
 echo "All tasks completed."
+
+echo "Push results to the repository..."
+git add *
+git commit -m "Validation results"
+git push
