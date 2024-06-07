@@ -1,5 +1,3 @@
-from problem.BRKGA_decoder import BRKGADecoder
-from problem.BRKGA_fwk.solver_BRKGA import Solver_BRKGA
 from problem.GRASP_model import GRASP
 from problem.flow import Flow
 from problem.greedy_model import Greedy
@@ -8,7 +6,7 @@ import json
 SOLVER = "greedy"
 
 # instance_generator/factor_f/instance_11.json
-with open('tests/scenario8.json', 'r') as f:
+with open('instance_generator/instances/instance_jitter/instance.json', 'r') as f:
     data = json.load(f)
 
     # constructive solution
@@ -31,8 +29,7 @@ with open('tests/scenario8.json', 'r') as f:
         instance = GRASP(network_parameeter=data)
         instance.set_alpha(0.1)
         instance.set_execution_time(60)
-    elif SOLVER == "brkga":
-        instance = BRKGADecoder(network_parameeter=data)
+    
         
     if SOLVER == "grasp":
 
@@ -148,7 +145,7 @@ with open('tests/scenario8.json', 'r') as f:
 
         """
 
-        instance.generate_gantt()
+        #instance.generate_gantt()
         #print(instance.network.links_stats())
 
     else:

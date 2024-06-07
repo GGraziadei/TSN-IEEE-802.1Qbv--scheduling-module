@@ -9,6 +9,16 @@ do
 
 done
 
+for var in $@
+
+do
+    echo "$var Instance Post-processing"
+    python3 instance_generator/stats_to_csv.py -f "instance_generator/instances/$var/out_heuristic"
+    python3 instance_generator/generate_graph.py -f "instance_generator/instances/$var/out_heuristic"
+done
+
+
+
 # Wait for all tasks to complete
 wait
 echo "All tasks completed."
