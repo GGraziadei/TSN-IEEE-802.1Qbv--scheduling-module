@@ -91,7 +91,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
                 for link in optical_links:
                     from pandas import DataFrame
                     df = link.fragmentation()
-                    df.to_excel(f'{args.folder}/fragmentation_{link.get_id()}.xlsx')
+                    df.to_excel(f'{args.folder}/fragmentation/fragmentation_link{link.get_id()}_request{count}.xlsx')
                     import matplotlib.pyplot as plt
                     # draw boxplot
                     df.boxplot(column='size', by='category')
