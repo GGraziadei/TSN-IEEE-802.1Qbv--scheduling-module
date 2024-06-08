@@ -48,11 +48,6 @@ for row in data:
             row['delay'] = 1
             print('delay > 1')
 
-        app1_delay.append(row['delay'])
-    else:
-        app2_delay.append(row['delay'])
-
-
 # plot the data
 # x axis is the id
 n_requests = [int(row['instance']) for row in data]
@@ -69,8 +64,10 @@ cumulative_jitter = [float(row['cumulative_max_jitter']) for row in data]
 
 # get request per app 
 app1_requests = [row for row in data if row['app'] == 'App_1']
+app1_delay = [float(row['delay']) for row in app1_requests]
 app1_n_requests = range(1, len(app1_requests) + 1)
 app2_requests = [row for row in data if row['app'] == 'App_2']
+app2_delay = [float(row['delay']) for row in app2_requests]
 app2_n_requests = range(1, len(app2_requests) + 1)
 
 
