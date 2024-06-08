@@ -87,9 +87,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
                 link3 = instance.network.get_link_by_id(3)
 
             count += 1
-            
-        instance.generate_gantt(f'{args.folder}/gantt_heuristic.png')
-                  
+                              
 # save stats in pickle file
 import pickle
 with open(f'{args.folder}/out_heuristic.pickle', 'wb') as f:
