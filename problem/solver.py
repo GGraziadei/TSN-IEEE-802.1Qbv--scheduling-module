@@ -149,7 +149,7 @@ class TSNScheduling:
             for i in range(1, f.get_T_f()+1):
                 color = np.random.rand(3,)
                 colors[f.get_id(),i] = color
-
+        
         for (f,e,t,i) in self.x_feti.keys():
             flow = self.network.get_flows()[f-1]
             link = self.network.get_links()[e-1]
@@ -187,7 +187,8 @@ class TSNScheduling:
         ax.grid(which='major', axis='x', linestyle='-')
     
         
-        plt.show()
+        plt.savefig(file_name)
+
     
     def pipeline(self,e1,e2,flow_id) -> float:  
         link1 = self.network.get_link_by_id(e1) 

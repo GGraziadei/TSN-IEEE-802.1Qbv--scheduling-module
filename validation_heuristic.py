@@ -64,7 +64,6 @@ with open(f'{args.folder}/network.json', 'r') as f:
         instance.pre_processing()
         instance.solve()
         
-        networks_load = {}
         stats[flow.get_id()] = instance.stat()
         stats[flow.get_id()]["delays"]=copy.deepcopy(instance.d_fi)
         stats[flow.get_id()]["jitter"]=copy.deepcopy(instance.j_f)
@@ -82,20 +81,15 @@ with open(f'{args.folder}/network.json', 'r') as f:
             count += 1
             
             if count==200:
-                networks_load[200] = copy.deepcopy(instance.network)
+                instance.generate_gantt()
             elif count==400:
-                networks_load[400] = copy.deepcopy(instance.network)
             elif count==600:
-                networks_load[600] = copy.deepcopy(instance.network)
             elif count==800:
-                networks_load[800] = copy.deepcopy(instance.network)
             elif count==1000:
-                networks_load[1000] = copy.deepcopy(instance.network)
-         
+            elif count==1500:
+            
 # save stats in pickle file
 import pickle
 with open(f'{args.folder}/out_heuristic.pickle', 'wb') as f:
     pickle.dump(stats, f)
 
-with open(f'{args.folder}/load.pickle', 'wb') as f:
-    pickle.dump(networks_load, f)

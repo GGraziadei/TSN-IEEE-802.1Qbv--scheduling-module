@@ -131,14 +131,13 @@ network.add_edge("DC3", "DC4", "optical", processing_mode, optical_throughput, o
 for u,v in network.G.edges:
     print(f"Edge {u} -> {v}", network.G[u][v])
 
-optical_throughput_lan =  100 * 10**6 if args.speed == None else int(args.speed) * 10 # 10 Gbps
 
 
 ### Add user equipments ###
 for i in range(1,201):
     network.add_edge(f"UE_{i}", "DC1", "wifi6", processing_mode, radio_throughput, radio_size, radio_delay)
     network.add_edge("DC4", f"UE_{i+200}", "wifi6", processing_mode, radio_throughput, radio_size, radio_delay)
-    network.add_edge("DC4", f"UE_{i+400}", "wired", processing_mode, optical_throughput_lan, optical_size, radio_delay)
+    network.add_edge("DC4", f"UE_{i+400}", "wired", processing_mode, optical_throughput, optical_size, radio_delay)
     #network.draw()
 
 ### Generate requests ###
