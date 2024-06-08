@@ -82,7 +82,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
 
                 # for optical links fragmentation
                 link1 = instance.network.get_link_by_id(1)
-                link1.fragmentation()
+                print(link1.fragmentation())
                 link2 = instance.network.get_link_by_id(2)
                 link3 = instance.network.get_link_by_id(3)
 
