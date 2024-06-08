@@ -72,6 +72,9 @@ with open(f'{args.folder}/network.json', 'r') as f:
         #stats[flow.get_id()]["plan"]=copy.deepcopy(instance.x_feti)
         count = 1
 
+        if not os.path.exists(f'{args.folder}/fragmentation'):
+            os.makedirs(f'{args.folder}/fragmentation')
+            
         for link in optical_links:
             from pandas import DataFrame
             df = link.fragmentation()
