@@ -181,7 +181,7 @@ ax[0,0].set_xlabel('Number of requests')
 ax[0,0].set_ylabel('Time (ms)')
 ax[0,0].set_title('Delay and jitter of App1')
 
-ax[0,1].plot(app1_n_requests, df['cumulative_max_delay_app1'], label='App1 cumulative max delay')
+ax[0,1].plot( df['cumulative_max_delay_app1'], label='App1 cumulative max delay')
 #ax[0,1].plot(app1_n_requests, app1_delay_mean, label='App1 cumulative mean delay')
 
 ax[0,1].plot(app1_n_requests, df['cumulative_max_jitter_app1'], label='App1 cumulative max jitter')
