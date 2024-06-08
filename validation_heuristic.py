@@ -81,12 +81,8 @@ with open(f'{args.folder}/network.json', 'r') as f:
             count += 1
             
             if count==200:
-                instance.generate_gantt()
-            elif count==400:
-            elif count==600:
-            elif count==800:
-            elif count==1000:
-            elif count==1500:
+                instance.generate_gantt('gantt_heuristic_200.png')
+            
             
 # save stats in pickle file
 import pickle
