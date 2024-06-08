@@ -52,3 +52,9 @@ Accepted requests:  1
 Feasibility:  0.0003333333333333333
 Average pre_processing time:  0.134456
 Average solving time:  0.845573
+instance_generator/instances/instance_jitter/out_heuristic
+Number of items:  3000
+Accepted requests:  1
+Feasibility:  0.0003333333333333333
+Average pre_processing time:  0.119114
+Average solving time:  0.893018

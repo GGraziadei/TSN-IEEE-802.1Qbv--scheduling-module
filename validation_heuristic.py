@@ -6,6 +6,7 @@ from problem.flow import Flow
 from problem.greedy_model import Greedy
 from problem.milp_model import ILP
 from argparse import ArgumentParser
+from bitarray import *
 
 parser = ArgumentParser()
 parser.add_argument("-i", "--instance", dest="folder", help="Instance folder.", required=True)
@@ -78,6 +79,13 @@ with open(f'{args.folder}/network.json', 'r') as f:
                 stats[flow.get_id()]["jitter"]=copy.deepcopy(instance.j_f)
                 stats[flow.get_id()]["app"] = request["name"]
                 #stats[flow.get_id()]["plan"]=copy.deepcopy(instance.x_feti)
+
+                # for optical links fragmentation
+                link1 = instance.network.get_link_by_id(1)
+                link1.fragmentation()
+                link2 = instance.network.get_link_by_id(2)
+                link3 = instance.network.get_link_by_id(3)
+
             count += 1
             
         instance.generate_gantt(f'{args.folder}/gantt_heuristic.png')

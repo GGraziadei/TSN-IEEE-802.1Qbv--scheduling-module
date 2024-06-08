@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class DirectedLink:
 
     class TransmissionMode(Enum):
@@ -97,5 +96,6 @@ class DirectedLink:
         ones = self.get_T_e().count(0)
         return { 'load' : ones/length, 'buffer_info': self.get_T_e().buffer_info() }
         
-        
-        
+    def fragmentation(self):
+        import bitarray
+        return bitarray.intervals(self.get_T_e())
