@@ -133,11 +133,11 @@ df.set_index('instance', inplace=True)
 
 # df remove columns
 df.drop(columns=['cumulative_max_delay_app', 'cumulative_max_jitter_app'], inplace=True)
-df['cumulative_max_delay_app1'] = [cumlative_requests[r]['app1_delay'] for r in cumlative_requests]
-df['cumulative_max_jitter_app1'] = [cumlative_requests[r]['app1_jitter'] for r in cumlative_requests]
+df['max_delay_app1'] = [cumlative_requests[r]['app1_delay'] for r in cumlative_requests]
+df['max_jitter_app1'] = [cumlative_requests[r]['app1_jitter'] for r in cumlative_requests]
 
-df['cumulative_max_delay_app2'] = [cumlative_requests[r]['app2_delay'] for r in cumlative_requests]
-df['cumulative_max_jitter_app2'] = [cumlative_requests[r]['app2_jitter'] for r in cumlative_requests]
+df['max_delay_app2'] = [cumlative_requests[r]['app2_delay'] for r in cumlative_requests]
+df['max_jitter_app2'] = [cumlative_requests[r]['app2_jitter'] for r in cumlative_requests]
 
 df.to_excel(f'instance_generator/graphs/{args.filename}/{args.filename}.xlsx')
 
@@ -179,7 +179,7 @@ ax[0,0].set_ylabel('Time (ms)')
 ax[0,0].set_title('Delay and jitter of App1')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_delay, label='App1 cumulative max delay')
-#ax[0,1].plot(app1_n_requests, app1_delay_mean, label='App1 cumulative mean delay')
+ax[0,1].plot(app1_n_requests, app1_delay_mean, label='App1 cumulative mean delay')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_jitter, label='App1 cumulative max jitter')
 ax[0,1].legend()
@@ -195,7 +195,7 @@ ax[1,0].set_ylabel('Time (ms)')
 ax[1,0].set_title('Delay and jitter of App2')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_delay, label='App2 cumulative max delay')
-#ax[1,1].plot(app2_n_requests, app2_delay_mean, label='App2 cumulative mean delay')
+ax[1,1].plot(app2_n_requests, app2_delay_mean, label='App2 cumulative mean delay')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_jitter, label='App2 cumulative max jitter')
 ax[1,1].legend()
