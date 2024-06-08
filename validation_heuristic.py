@@ -74,7 +74,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
 
         if not os.path.exists(f'{args.folder}/fragmentation'):
             os.makedirs(f'{args.folder}/fragmentation')
-            
+
         for link in optical_links:
             from pandas import DataFrame
             df = link.fragmentation()
@@ -85,7 +85,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
             plt.title('Contiguos available time')
             plt.ylabel('Available time (us)')
             plt.xlabel('Cycle section')
-            plt.savefig(f'{args.folder}/fragmentation_{link.get_id()}_c{count}.png')
+            plt.savefig(f'{args.folder}/fragmentation/fragmentation_{link.get_id()}_c{count}.png')
 
         for flow in flows:
             sol = instance.new_request(flow)
