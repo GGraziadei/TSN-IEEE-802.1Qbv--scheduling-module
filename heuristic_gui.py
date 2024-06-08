@@ -23,7 +23,31 @@ with open('instance_generator/instances/instance_jitter/instance.json', 'r') as 
         print("Constructive solution with maximum jitter", j, "maximum delay", d)
         #instance.ls()
 
-
+        link1 = instance.network.get_link_by_id(1)
+        fragmentation = {}
+        t_e = link1.get_t_e()
+        for obj in link1.fragmentation():
+            val,start,end = obj
+            if val == 1:
+                fragmentation[start] = end-start
+        
+        # with df split fragmentation in category
+        from pandas import DataFrame, cut
+        df = DataFrame(fragmentation.items(), columns=['start', 'size'])
+        SECTIONS = 40
+        df['category'] = cut(df['start'], bins=range(0, int(t_e) + 1, int(t_e/SECTIONS)), labels=range(1, int(t_e) + 1, int(t_e/SECTIONS)), right=False)
+        df['size'] = df['size'] * link1.tau_e / 10**3
+        #remove start column
+        df.drop(columns=['start'], inplace=True)
+        
+        # boxplot with df
+        import matplotlib.pyplot as plt
+        # draw boxplot
+        df.boxplot(column='size', by='category')
+        plt.title('Contiguos available time')
+        plt.ylabel('Available time (us)')
+        plt.xlabel('Cycle section')
+        plt.show()
 
     if SOLVER == "grasp":
         instance = GRASP(network_parameeter=data)

@@ -97,5 +97,23 @@ class DirectedLink:
         return { 'load' : ones/length, 'buffer_info': self.get_T_e().buffer_info() }
         
     def fragmentation(self):
-        import bitarray
-        return bitarray.intervals(self.get_T_e())
+        import bitarray.util
+         
+        fragmentation = {}
+            
+        for obj in bitarray.util.intervals(self.get_T_e()):
+            val,start,end = obj
+            if val == 1:
+                fragmentation[start] = end-start
+        
+        # with df split fragmentation in category
+        from pandas import DataFrame, cut
+        df = DataFrame(fragmentation.items(), columns=['start', 'size'])
+        SECTIONS = 40
+        t_e = self.t_e
+        df['category'] = cut(df['start'], bins=range(0, int(t_e) + 1, int(t_e/SECTIONS)), labels=range(1, int(t_e) + 1, int(t_e/SECTIONS)), right=False)
+        df['size'] = df['size'] * self.tau_e / 10**3
+        #remove start column
+        df.drop(columns=['start'], inplace=True)
+
+        return df

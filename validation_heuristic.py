@@ -60,6 +60,7 @@ with open(f'{args.folder}/network.json', 'r') as f:
 
         data = json.load(f)
         instance = Greedy(data)
+        optical_links = [instance.network.get_link_by_id(1), instance.network.get_link_by_id(2), instance.network.get_link_by_id(3)]
         flow = flows.pop(0)
         instance.network.flows = [flow]
         instance.pre_processing()
@@ -81,11 +82,19 @@ with open(f'{args.folder}/network.json', 'r') as f:
                 #stats[flow.get_id()]["plan"]=copy.deepcopy(instance.x_feti)
 
                 # for optical links fragmentation
-                link1 = instance.network.get_link_by_id(1)
-                print('Fragmentation', link1.fragmentation())
-                link2 = instance.network.get_link_by_id(2)
-                link3 = instance.network.get_link_by_id(3)
-
+                
+                if count % 400 == 0:
+                    for link in optical_links:
+                        from pandas import DataFrame
+                        df = link.fragmentation()
+                        df.to_excel(f'{args.folder}/fragmentation_{link.get_id()}.xlsx')
+                        import matplotlib.pyplot as plt
+                        # draw boxplot
+                        df.boxplot(column='size', by='category')
+                        plt.title('Contiguos available time')
+                        plt.ylabel('Available time (us)')
+                        plt.xlabel('Cycle section')
+                        plt.savefig(f'{args.folder}/fragmentation_{link.get_id()}.png')
             count += 1
                               
 # save stats in pickle file
