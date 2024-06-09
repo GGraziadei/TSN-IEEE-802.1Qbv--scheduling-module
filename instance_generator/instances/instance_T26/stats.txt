@@ -1,6 +1,6 @@
 instance_generator/instances/instance_T26/out_heuristic
 Number of items:  3000
-Accepted requests:  2107
-Feasibility:  0.7023333333333334
-Average pre_processing time:  0.2761489999999941
-Average solving time:  0.6417024950166113
+Accepted requests:  2128
+Feasibility:  0.7093333333333334
+Average pre_processing time:  0.08612400000000285
+Average solving time:  0.26097149530075203
