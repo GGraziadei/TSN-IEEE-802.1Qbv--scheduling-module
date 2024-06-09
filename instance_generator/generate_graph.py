@@ -103,14 +103,48 @@ app1_max_delay = 0
 app2_max_delay = 0
 app1_max_jitter = 0
 app2_max_jitter = 0
+mean_delay_app1 = 0
+mean_jitter_app1 = 0
+mean_delay_app2 = 0
+mean_jitter_app2 = 0
+app1_count = 0
+app2_count = 0
+
+mean10_delay_app1 = 0
+mean10_jitter_app1 = 0
+mean10_delay_app2 = 0
+mean10_jitter_app2 = 0
+
 cumlative_requests = {}
 for row in data:
     if row['app'] == 'App_1':
+        app1_count += 1
+        mean_delay_app1 += float(row['delay'])
+        mean_jitter_app1 += float(row['jitter'])
+        mean10_delay_app1 += float(row['delay'])
+        mean10_jitter_app1 += float(row['jitter'])
+
+        if app1_count % 10 == 0:
+            mean10_delay_app1 = 0
+            mean10_jitter_app1 = 0
+
         if float(row['delay']) > app1_max_delay:
             app1_max_delay = float(row['delay'])
         if float(row['jitter']) > app1_max_jitter:
             app1_max_jitter = float(row['jitter'])
+        
     else:
+        app2_count += 1
+        mean_delay_app2 += float(row['delay'])
+        mean_jitter_app2 += float(row['jitter'])
+
+        mean10_delay_app2 += float(row['delay'])
+        mean10_jitter_app2 += float(row['jitter'])
+
+        if app2_count % 10 == 0:
+            mean10_delay_app2 = 0
+            mean10_jitter_app2 = 0
+            
         if float(row['delay']) > app2_max_delay:
             app2_max_delay = float(row['delay'])
         if float(row['jitter']) > app2_max_jitter:
@@ -122,7 +156,15 @@ for row in data:
         'app1_delay': app1_max_delay,
         'app2_delay': app2_max_delay,
         'app1_jitter': app1_max_jitter,
-        'app2_jitter': app2_max_jitter
+        'app2_jitter': app2_max_jitter,
+        'app1_mean_delay': mean_delay_app1 / app1_count if app1_count > 0 else 0,
+        'app2_mean_delay': mean_delay_app2 / app2_count if app2_count > 0 else 0,
+        'app1_mean_jitter': mean_jitter_app1 / app1_count if app1_count > 0 else 0,
+        'app2_mean_jitter': mean_jitter_app2 / app2_count if app2_count > 0 else 0,
+        'app1_mean10_delay': mean10_delay_app1 / (app1_count % 10) if app1_count % 10 > 0 else 0,
+        'app2_mean10_delay': mean10_delay_app2 / (app2_count % 10) if app2_count % 10 > 0 else 0,
+        'app1_mean10_jitter': mean10_jitter_app1 / (app1_count % 10) if app1_count % 10 > 0 else 0,
+        'app2_mean10_jitter': mean10_jitter_app2 / (app2_count % 10) if app2_count % 10 > 0 else 0
     }
 
 #export to excel 
@@ -139,6 +181,17 @@ df['max_jitter_app1'] = [cumlative_requests[r]['app1_jitter'] for r in cumlative
 df['max_delay_app2'] = [cumlative_requests[r]['app2_delay'] for r in cumlative_requests]
 df['max_jitter_app2'] = [cumlative_requests[r]['app2_jitter'] for r in cumlative_requests]
 
+df['mean_delay_app1'] = [cumlative_requests[r]['app1_mean_delay'] for r in cumlative_requests]
+df['mean_jitter_app1'] = [cumlative_requests[r]['app1_mean_jitter'] for r in cumlative_requests]
+df['mean_delay_app2'] = [cumlative_requests[r]['app2_mean_delay'] for r in cumlative_requests]
+df['mean_jitter_app2'] = [cumlative_requests[r]['app2_mean_jitter'] for r in cumlative_requests]
+
+df['mean10_delay_app1'] = [cumlative_requests[r]['app1_mean10_delay'] for r in cumlative_requests]
+df['mean10_jitter_app1'] = [cumlative_requests[r]['app1_mean10_jitter'] for r in cumlative_requests]
+df['mean10_delay_app2'] = [cumlative_requests[r]['app2_mean10_delay'] for r in cumlative_requests]
+df['mean10_jitter_app2'] = [cumlative_requests[r]['app2_mean10_jitter'] for r in cumlative_requests]
+
+# Pandas mean so far 
 df.to_excel(f'instance_generator/graphs/{args.filename}/{args.filename}.xlsx')
 
 # GRAPH 1 - solving time - 
@@ -179,7 +232,7 @@ ax[0,0].set_ylabel('Time (ms)')
 ax[0,0].set_title('Delay and jitter of App1')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_delay, label='App1 cumulative max delay')
-ax[0,1].plot(app1_n_requests, app1_delay_mean, label='App1 cumulative mean delay')
+#ax[0,1].plot(app1_n_requests, app1_delay_mean, label='App1 cumulative mean delay')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_jitter, label='App1 cumulative max jitter')
 ax[0,1].legend()
@@ -195,7 +248,7 @@ ax[1,0].set_ylabel('Time (ms)')
 ax[1,0].set_title('Delay and jitter of App2')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_delay, label='App2 cumulative max delay')
-ax[1,1].plot(app2_n_requests, app2_delay_mean, label='App2 cumulative mean delay')
+#ax[1,1].plot(app2_n_requests, app2_delay_mean, label='App2 cumulative mean delay')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_jitter, label='App2 cumulative max jitter')
 ax[1,1].legend()
