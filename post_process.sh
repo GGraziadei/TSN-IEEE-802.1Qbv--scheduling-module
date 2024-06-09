@@ -10,5 +10,5 @@ done
 
 echo "Push results to the repository..."
 git add *
-git commit -m "Validation results"
+git commit -m "Validation results $@ [Autocommit]"
 git push
