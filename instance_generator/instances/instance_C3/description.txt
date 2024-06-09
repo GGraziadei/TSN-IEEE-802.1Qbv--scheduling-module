@@ -1,4 +1,4 @@
-Processing mode: FAST
+Processing mode: STORE_AND_FORWARD
 Duration: 10000000 us
 Path generation mode: wifi2dc
 Number of requests: 3000
