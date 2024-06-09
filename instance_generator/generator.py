@@ -156,12 +156,6 @@ for id in range(1, int(args.number) + 1):
     size = random.randint(int(args.size), int(args.size) + 30)
     print(f"Request {id} with size {size} bytes")
     
-    for id in path:
-        # find edge with id
-        for u,v in network.G.edges:
-            if network.G[u][v]["id"] == id:
-                print(f"Edge {u} -> {v}: {id}", network.G[u][v])
-
     if args.app and int(args.app) == 1:
         app = Application(f"App_1", duration/10, delay=duration/10, jitter=duration/100, path=path, size=size)
     elif args.app and int(args.app) == 2:
