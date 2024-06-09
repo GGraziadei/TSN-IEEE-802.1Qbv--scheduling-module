@@ -1015,3 +1015,926 @@ Traceback (most recent call last):
     raise TypeError("expected non-empty vector for x")
 TypeError: expected non-empty vector for x
 Push results to the repository...
+[main b8508f3] Validation results
+ 101 files changed, 127608 insertions(+), 17544 deletions(-)
+ rewrite instance_generator/graphs/instance_generator_instances_instance_T13_1_out_heuristic/instance_generator_instances_instance_T13_1_out_heuristic.xlsx (91%)
+ rewrite instance_generator/graphs/instance_generator_instances_instance_T13_2_out_heuristic/instance_generator_instances_instance_T13_2_out_heuristic.xlsx (92%)
+ rewrite instance_generator/instances/instance_C3/out.txt (78%)
+ rewrite instance_generator/instances/instance_C4/out.txt (80%)
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request3200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request3200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request3600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request3600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request4000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request4000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request4400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request4400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request4800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request4800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request5200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request5200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request5600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request5600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request6000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request6000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request6400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request6400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request6800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request6800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request7200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request7200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request7600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request7600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request3200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request3200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request3600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request3600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request4000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request4000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request4400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request4400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request4800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request4800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request5200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request5200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request5600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request5600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request6000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request6000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request6400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request6400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request6800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request6800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request7200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request7200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request7600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request7600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request3200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request3200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request3600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request3600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request4000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request4000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request4400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request4400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request4800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request4800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request5200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request5200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request5600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request5600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request6000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request6000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request6400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request6400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request6800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request6800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request7200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request7200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request7600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request7600.xlsx
+ rewrite instance_generator/instances/instance_T13_1/out_heuristic.csv (79%)
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request4800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request4800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request5200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request5200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request5600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request5600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request4800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request4800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request5200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request5200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request5600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request5600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request4800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request4800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request5200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request5200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request5600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request5600.xlsx
+ rewrite instance_generator/instances/instance_T13_2/out_heuristic.csv (91%)
+To github.com:GGraziadei/TSN-IEEE-802.1Qbv--scheduling-module.git
+   b5b95e1..b8508f3  main -> main
+All tasks completed.
+instance_C4 Instance Post-processing
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+instance_C3 Instance Post-processing
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+delay > 1
+Push results to the repository...
