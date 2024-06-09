@@ -168,7 +168,7 @@ class TSNScheduling:
         fig, ax = plt.subplots(figsize=(10, 5))
         for i, row in df.iterrows():
             flow = row['flow']
-            color = colors[flow]
+            color = np.random.rand(3,)
             ax.barh(row['link'], row['duration'], left=row['start'], color=color, label=row['link'])
         
         for link in self.network.get_links():
@@ -187,7 +187,7 @@ class TSNScheduling:
         ax.grid(which='major', axis='x', linestyle='-')
     
         
-        plt.savefig(file_name)
+        plt.show()
 
     
     def pipeline(self,e1,e2,flow_id) -> float:  

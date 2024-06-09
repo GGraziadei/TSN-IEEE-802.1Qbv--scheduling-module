@@ -424,6 +424,7 @@ class Heuristics(TSNScheduling):
     def new_request(self, flow : Flow, ch = None) :
 
         flow = self.flow_prepare(flow)
+        
         tick = self.now()
         network = copy.deepcopy(self.network)
         incumbent = copy.deepcopy(self.x_feti)
@@ -457,10 +458,11 @@ class Heuristics(TSNScheduling):
             if best_delay > flow["flow"].get_max_delay():
                 flow["flow"].set_max_delay(best_delay)
 
-            step = flow["flow"].get_w_fe()[flow["flow"].get_E_f()[0]]
+            
             for e_id, t in best_candidate:
                 e = self.network.get_link_by_id(e_id)
                 t_e = e.get_t_e()
+                step = flow["flow"].get_w_fe()[e_id]
                 for k in range(0, step):
                     _t = t + k
                     if _t > t_e: _t = _t - t_e

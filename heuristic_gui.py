@@ -1,3 +1,4 @@
+import copy
 from problem.GRASP_model import GRASP
 from problem.flow import Flow
 from problem.greedy_model import Greedy
@@ -6,13 +7,12 @@ import json
 SOLVER = "greedy"
 
 # instance_generator/factor_f/instance_11.json
-with open('instance_generator/instances/instance_jitter/instance.json', 'r') as f:
+with open('tests/c11.json', 'r') as f:
     data = json.load(f)
 
     # constructive solution
     instance = Greedy(network_parameeter=data)
     instance.pre_processing()
-
 
     sol = instance.solve()
 
@@ -23,32 +23,7 @@ with open('instance_generator/instances/instance_jitter/instance.json', 'r') as 
         print("Constructive solution with maximum jitter", j, "maximum delay", d)
         #instance.ls()
 
-        link1 = instance.network.get_link_by_id(1)
-        fragmentation = {}
-        t_e = link1.get_t_e()
-        for obj in link1.fragmentation():
-            val,start,end = obj
-            if val == 1:
-                fragmentation[start] = end-start
-        
-        # with df split fragmentation in category
-        from pandas import DataFrame, cut
-        df = DataFrame(fragmentation.items(), columns=['start', 'size'])
-        SECTIONS = 40
-        df['category'] = cut(df['start'], bins=range(0, int(t_e) + 1, int(t_e/SECTIONS)), labels=range(1, int(t_e) + 1, int(t_e/SECTIONS)), right=False)
-        df['size'] = df['size'] * link1.tau_e / 10**3
-        #remove start column
-        df.drop(columns=['start'], inplace=True)
-        
-        # boxplot with df
-        import matplotlib.pyplot as plt
-        # draw boxplot
-        df.boxplot(column='size', by='category')
-        plt.title('Contiguos available time')
-        plt.ylabel('Available time (us)')
-        plt.xlabel('Cycle section')
-        plt.show()
-
+    
     if SOLVER == "grasp":
         instance = GRASP(network_parameeter=data)
         instance.set_alpha(0.1)
@@ -79,45 +54,15 @@ with open('instance_generator/instances/instance_jitter/instance.json', 'r') as 
         print("---",SOLVER,"---")
         print("Constructive solution with maximum jitter", j, "maximum delay", d)
 
-        if SOLVER == "brkga":
-            instance = BRKGADecoder(network_parameeter=data)
-            instance.pre_processing()
-
-            config = {
-                "individualsMultiplier" : 1,
-                "eliteProp" : 0.3,
-                "mutantProp" : 0.5,
-                "inheritanceProb" : 0.7,
-                "maxExecTime" : 10,
-            }
-
-            numGenes = instance.get_number_genes()
-
-            config['numGenes'] = numGenes
-            config['numIndividuals'] = int(config["individualsMultiplier"] * numGenes)
-            config['numElite'] = int(config["eliteProp"] * config["numIndividuals"])
-            config['numMutants'] = int(config["mutantProp"] * config['numIndividuals'])
-            config['numCrossover'] = int(config['numIndividuals'] - config['numElite']- config['numMutants'] )
-                
-            print(config)
-            
-            solver = Solver_BRKGA(config, instance)
-            solution,d_fi,j_f = solver.solve(initial_solution=(x_feti,d_fi,j_f),fitness=(j,d))
-            instance.x_feti = solution
-            instance.d_fi = d_fi
-            instance.j_f = j_f
-
         #instance.export_results("heuristic_results_pre")
         #print(instance.stat())
+        instance.new_request(Flow(-1,[1,2], 400, 1000, 400, 100))
+        instance.new_request(Flow(-1,[1,2], 400, 1000, 400, 100))
+        instance.new_request(Flow(-1,[1,2], 400, 1000, 400, 100))
         
+        instance.generate_gantt()
+
         """
-        # new request 1
-        flow = Flow(-1,[2], 500, 256, 128, 500)
-        instance.flow_prepare(flow)
-        if instance.new_request(flow):
-            instance.export_results("heuristic_results_post_1")
-        
-        
         # new request 2
         flow = Flow(-1,[1,3], 100, 256, 128, 200)
         instance.flow_prepare(flow)

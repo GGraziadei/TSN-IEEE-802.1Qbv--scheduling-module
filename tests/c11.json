@@ -5,13 +5,13 @@
     "a_e" : [3,6,9],
     "tau_e" : [0.8,4,0.8],
     "d_e" : [4,20,4],
-    "g_e" : [[], [2,3,4], []],
+    "g_e" : [[], [], []],
     "F" : [1],
     "#f" : [40],
     "E_f": [[1,2]],
-    "P_f": [100],
-    "DELAY_f": [400],
-    "JITTER_f": [40],
-    "mode" : "fast"
+    "P_f": [400],
+    "DELAY_f": [1000],
+    "JITTER_f": [400],
+    "mode" : ["STORE_AND_FORWARD", "STORE_AND_FORWARD", "STORE_AND_FORWARD"]
 }
 

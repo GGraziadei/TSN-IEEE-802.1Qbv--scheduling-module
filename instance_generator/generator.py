@@ -153,9 +153,6 @@ requests = []
 PATHS  = dict(nx.all_pairs_shortest_path(network.G))
 for id in range(1, int(args.number) + 1):
     path = network.random_path(src_list=ue_src, dest_list=dest, paths=PATHS, debug=False)
-    #reverse list 
-    path = path[::-1]
-    print(path)
     size = random.randint(int(args.size), int(args.size) + 30)
 
     if args.app and int(args.app) == 1:
