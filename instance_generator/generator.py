@@ -154,6 +154,13 @@ PATHS  = dict(nx.all_pairs_shortest_path(network.G))
 for id in range(1, int(args.number) + 1):
     path = network.random_path(src_list=ue_src, dest_list=dest, paths=PATHS, debug=False)
     size = random.randint(int(args.size), int(args.size) + 30)
+    print(f"Request {id} with size {size} bytes")
+    
+    for id in path:
+        # find edge with id
+        for u,v in network.G.edges:
+            if network.G[u][v]["id"] == id:
+                print(f"Edge {u} -> {v}: {id}", network.G[u][v])
 
     if args.app and int(args.app) == 1:
         app = Application(f"App_1", duration/10, delay=duration/10, jitter=duration/100, path=path, size=size)
@@ -185,15 +192,16 @@ with open(f"{folder_name}/description.txt", "w") as f:
 # json file network
 with open(f"{folder_name}/network.json", "w") as f:
     G = network.G
+    edges = sorted(G.edges(), key=lambda x: G[x[0]][x[1]]["id"])
     data = {
         "SF_duration" : duration,
-        "E" : [G[u][v]["id"] for (u, v) in G.edges()],
-        "B_e" : [G[u][v]["throughput"] for i, (u, v) in enumerate(G.edges())],
-        "a_e" : [G[u][v]["a_e"] for i, (u, v) in enumerate(G.edges())],
-        "tau_e" : [G[u][v]["tau_e"] for i, (u, v) in enumerate(G.edges())],
-        "g_e" : [ [] for i, (u, v) in enumerate(G.edges())],
-        "d_e" : [G[u][v]["d_e"] for i, (u, v) in enumerate(G.edges())],
-        "mode" : [ processing_mode.get_name()  for i, (u, v) in enumerate(G.edges())],
+        "E" : [G[u][v]["id"] for (u, v) in edges],
+        "B_e" : [G[u][v]["throughput"] for i, (u, v) in enumerate(edges)],
+        "a_e" : [G[u][v]["a_e"] for i, (u, v) in enumerate(edges)],
+        "tau_e" : [G[u][v]["tau_e"] for i, (u, v) in enumerate(edges)],
+        "g_e" : [ [] for i, (u, v) in enumerate(edges)],
+        "d_e" : [G[u][v]["d_e"] for i, (u, v) in enumerate(edges)],
+        "mode" : [ processing_mode.get_name()  for i, (u, v) in enumerate(edges)],
     }
     json.dump(data, f, indent=4)  
 
