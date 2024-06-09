@@ -844,3 +844,174 @@ delay > 1
 delay > 1
 delay > 1
 Push results to the repository...
+[main e946801] Validation results
+ 149 files changed, 118113 insertions(+), 429910 deletions(-)
+ rewrite instance_generator/graphs/instance_generator_instances_instance_C3_out_heuristic/cumulative.png (99%)
+ create mode 100644 instance_generator/graphs/instance_generator_instances_instance_C3_out_heuristic/instance_generator_instances_instance_C3_out_heuristic.xlsx
+ rewrite instance_generator/graphs/instance_generator_instances_instance_C3_out_heuristic/kpi.png (97%)
+ rewrite instance_generator/graphs/instance_generator_instances_instance_C3_out_heuristic/time.png (98%)
+ rewrite instance_generator/graphs/instance_generator_instances_instance_C4_out_heuristic/cumulative.png (99%)
+ create mode 100644 instance_generator/graphs/instance_generator_instances_instance_C4_out_heuristic/instance_generator_instances_instance_C4_out_heuristic.xlsx
+ rewrite instance_generator/graphs/instance_generator_instances_instance_C4_out_heuristic/kpi.png (97%)
+ rewrite instance_generator/graphs/instance_generator_instances_instance_C4_out_heuristic/time.png (98%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link1_request400.png (99%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link1_request400.xlsx (85%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link1_request800.png (98%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link1_request800.xlsx (90%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link2_request400.png (99%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link2_request400.xlsx (86%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link2_request800.png (99%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link2_request800.xlsx (91%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link3_request400.png (99%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link3_request400.xlsx (86%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link3_request800.png (98%)
+ rewrite instance_generator/instances/instance_C3/fragmentation/fragmentation_link3_request800.xlsx (91%)
+ rewrite instance_generator/instances/instance_C3/out_heuristic_troughput.csv (99%)
+ rewrite instance_generator/instances/instance_C4/fragmentation/fragmentation_link1_request400.png (99%)
+ create mode 100644 instance_generator/instances/instance_C4/fragmentation/fragmentation_link1_request400.xlsx
+ rewrite instance_generator/instances/instance_C4/fragmentation/fragmentation_link1_request800.png (98%)
+ create mode 100644 instance_generator/instances/instance_C4/fragmentation/fragmentation_link1_request800.xlsx
+ rewrite instance_generator/instances/instance_C4/fragmentation/fragmentation_link2_request400.png (99%)
+ create mode 100644 instance_generator/instances/instance_C4/fragmentation/fragmentation_link2_request400.xlsx
+ rewrite instance_generator/instances/instance_C4/fragmentation/fragmentation_link2_request800.png (99%)
+ create mode 100644 instance_generator/instances/instance_C4/fragmentation/fragmentation_link2_request800.xlsx
+ rewrite instance_generator/instances/instance_C4/fragmentation/fragmentation_link3_request400.png (98%)
+ create mode 100644 instance_generator/instances/instance_C4/fragmentation/fragmentation_link3_request400.xlsx
+ rewrite instance_generator/instances/instance_C4/fragmentation/fragmentation_link3_request800.png (99%)
+ create mode 100644 instance_generator/instances/instance_C4/fragmentation/fragmentation_link3_request800.xlsx
+ rewrite instance_generator/instances/instance_C4/out_heuristic.csv (65%)
+ rewrite instance_generator/instances/instance_C4/out_heuristic_troughput.csv (99%)
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request1200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request1200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request1600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request1600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request2000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request2000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request2400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request2400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request2800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request2800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link1_request800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request1200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request1200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request1600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request1600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request2000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request2000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request2400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request2400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request2800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request2800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link2_request800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request1200.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request1200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request1600.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request1600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request2000.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request2000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request2400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request2400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request2800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request2800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request400.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request800.png
+ create mode 100644 instance_generator/instances/instance_T13_1/fragmentation/fragmentation_link3_request800.xlsx
+ rewrite instance_generator/instances/instance_T13_1/out.txt (82%)
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request1200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request1200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request1600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request1600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request2000.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request2000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request2400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request2400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request2800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request2800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request3200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request3200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request3600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request3600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request4000.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request4000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request4400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request4400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link1_request800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request1200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request1200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request1600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request1600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request2000.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request2000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request2400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request2400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request2800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request2800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request3200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request3200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request3600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request3600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request4000.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request4000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request4400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request4400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link2_request800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request1200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request1200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request1600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request1600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request2000.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request2000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request2400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request2400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request2800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request2800.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request3200.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request3200.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request3600.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request3600.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request4000.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request4000.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request4400.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request4400.xlsx
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request800.png
+ create mode 100644 instance_generator/instances/instance_T13_2/fragmentation/fragmentation_link3_request800.xlsx
+ rewrite instance_generator/instances/instance_T13_2/out.txt (73%)
+ create mode 100644 nohup.out
+To github.com:GGraziadei/TSN-IEEE-802.1Qbv--scheduling-module.git
+   2cccc9a..e946801  main -> main
+Update the repository...
+Already up to date.
+Validation script...
+instance_C4 Instance started
+instance_C3 Instance started
+All tasks completed.
+instance_T13_1 Instance Post-processing
+Traceback (most recent call last):
+  File "/home/ubuntu/TSN-IEEE-802.1Qbv--scheduling-module/instance_generator/generate_graph.py", line 211, in <module>
+    app2_solving_time_linear = np.polyfit(app2_n_requests, app2_solving_time, 3)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/numpy/lib/polynomial.py", line 639, in polyfit
+    raise TypeError("expected non-empty vector for x")
+TypeError: expected non-empty vector for x
+instance_T13_2 Instance Post-processing
+Traceback (most recent call last):
+  File "/home/ubuntu/TSN-IEEE-802.1Qbv--scheduling-module/instance_generator/generate_graph.py", line 210, in <module>
+    app1_solving_time_linear = np.polyfit(app1_n_requests, app1_solving_time, 3)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/numpy/lib/polynomial.py", line 639, in polyfit
+    raise TypeError("expected non-empty vector for x")
+TypeError: expected non-empty vector for x
+Push results to the repository...
