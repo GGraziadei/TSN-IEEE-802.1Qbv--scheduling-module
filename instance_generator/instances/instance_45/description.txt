@@ -1,0 +1,6 @@
+Processing mode: STORE_AND_FORWARD
+Duration: 10000000 us
+Path generation mode: wifi2dc
+Number of requests: 100
+Min size of the requests: 90 bytes
+Instance size: 1.265625e+32

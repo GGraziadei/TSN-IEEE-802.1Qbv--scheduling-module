@@ -22,10 +22,11 @@ with open(f'{args.filename}.csv', 'r') as f:
     interfaces = df['interface_id']
     traffic_troughput = df['traffic_troughput']
     network_troughput = df["network_troughput"]
-    traffic_wasted = df["waste_troughput"] 
+    df["waste_troughput"] = df["network_troughput"] - df["traffic_troughput"]
+
     plt.plot(interfaces, network_troughput, alpha=0.5)
     plt.scatter(interfaces, traffic_troughput, marker='x')
-    plt.plot(interfaces, traffic_wasted, marker='o')
+    plt.plot(interfaces, df["waste_troughput"], marker='o')
     plt.ylabel("Troughput (Kbitps)")
     plt.xlabel("Interface_id")
     plt.yscale('log')
@@ -40,3 +41,5 @@ with open(f'{args.filename}.csv', 'r') as f:
 
     plt.tight_layout()
     plt.savefig(f'{args.filename}.png')
+
+    df.to_excel(f'{args.filename}.xlsx')

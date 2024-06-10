@@ -20,6 +20,8 @@ parser.add_argument("-n", "--number", dest="number", help="Number of requests", 
 parser.add_argument("-os", "--opticalsize", dest="opticalsize", help="Size of the optical interface", required=False)
 parser.add_argument("-rs", "--radiosize", dest="radiosize", help="Size of the radio interface", required=False)
 parser.add_argument("-a", "--application", dest="app", help="Application class", required=False)
+parser.add_argument("-ue", "--ue_number", dest="ue_number", help="Instance name", required=False)
+
 # python3 instance_generator/generator.py -pm storeAndForward -t 100 -p wifi -s 80
 parser.add_argument("-name", "--name", dest="name", help="Instance name", required=False)
 
@@ -134,17 +136,22 @@ for u,v in network.G.edges:
 optical_delay_lan = 5
 
 ### Add user equipments ###
-for i in range(1,201):
+args.ue_number = int(args.ue_number)
+if not args.ue_number:
+    args.ue_number = 200
+ue_offest =  args.ue_number
+dc_offset = 2 * args.ue_number
+for i in range(1,args.ue_number + 1):
     network.add_edge(f"UE_{i}", "DC1", "wifi6", processing_mode, radio_throughput, radio_size, radio_delay)
-    network.add_edge("DC4", f"UE_{i+200}", "wifi6", processing_mode, radio_throughput, radio_size, radio_delay)
+    network.add_edge("DC4", f"UE_{i+ue_offest}", "wifi6", processing_mode, radio_throughput, radio_size, radio_delay)
     dc_hop = random.choice(["DC4"])
-    network.add_edge("DC4", f"UE_{i+400}", "wired", processing_mode, optical_throughput, optical_size, optical_delay_lan)
+    network.add_edge("DC4", f"UE_{i+dc_offset}", "wired", processing_mode, optical_throughput, optical_size, optical_delay_lan)
     #network.draw()
 
 ### Generate requests ###
-dc_dest = [f"UE_{i}" for i in range(401,601)]
-ue_dest = [f"UE_{i}" for i in range(201,401)]
-ue_src = [f"UE_{i}" for i in range(1,201)]
+dc_dest = [f"UE_{i}" for i in range(dc_offset + 1 , dc_offset + 1 + args.ue_number)]
+ue_dest = [f"UE_{i}" for i in range(ue_offest + 1 , ue_offest + 1 + args.ue_number)]
+ue_src = [f"UE_{i}" for i in range(1, args.ue_number + 1)]
 
 dest = ue_dest if args.path == "wifi2wifi" else dc_dest
 
