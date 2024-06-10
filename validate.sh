@@ -25,5 +25,5 @@ done
 
 echo "Push results to the repository..."
 git add *
-git commit -m "Validation $@ [Auto Commit Pipeline]"
+git commit -m "Validation - Autocommit Pipeline"
 git push
