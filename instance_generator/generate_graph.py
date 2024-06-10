@@ -198,6 +198,8 @@ df = pd.merge(df, app2_filtered[['mean10_delay_app2', 'mean10_jitter_app2']], on
 
 # if the value is nan, replace it with the previous value
 df.fillna(method='ffill', inplace=True)
+# if the value is nan, replace it with the next value
+df.fillna(method='bfill', inplace=True)
 
 # Pandas mean so far 
 df.to_excel(f'instance_generator/graphs/{args.filename}/{args.filename}.xlsx')
@@ -240,7 +242,7 @@ ax[0,0].set_ylabel('Time (ms)')
 ax[0,0].set_title('Delay and jitter of App1')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_delay, label='App1 cumulative max delay')
-#ax[0,1].plot(app1_n_requests, app1_delay_mean, label='App1 cumulative mean delay')
+ax[0,1].plot(app1_n_requests, df['mean10_delay_app1'], label='App1 cumulative mean delay')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_jitter, label='App1 cumulative max jitter')
 ax[0,1].legend()
