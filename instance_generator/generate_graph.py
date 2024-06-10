@@ -186,11 +186,14 @@ df['mean_jitter_app1'] = [cumlative_requests[r]['app1_mean_jitter'] for r in cum
 df['mean_delay_app2'] = [cumlative_requests[r]['app2_mean_delay'] for r in cumlative_requests]
 df['mean_jitter_app2'] = [cumlative_requests[r]['app2_mean_jitter'] for r in cumlative_requests]
 
-df['mean10_delay_app1'] = [cumlative_requests[r]['app1_mean10_delay'] for r in cumlative_requests]
-df['mean10_jitter_app1'] = [cumlative_requests[r]['app1_mean10_jitter'] for r in cumlative_requests]
-df['mean10_delay_app2'] = [cumlative_requests[r]['app2_mean10_delay'] for r in cumlative_requests]
-df['mean10_jitter_app2'] = [cumlative_requests[r]['app2_mean10_jitter'] for r in cumlative_requests]
+app1_filtered = df[df['app'] == 'App_1']
+app2_filtered = df[df['app'] == 'App_2']
+app1_filtered['mean10_delay_app1'] = app1_filtered['delay'].rolling(10).mean()
+app2_filtered['mean10_delay_app2'] = app2_filtered['delay'].rolling(10).mean()
+app1_filtered['mean10_jitter_app1'] = app1_filtered['jitter'].rolling(10).mean()
+app2_filtered['mean10_jitter_app2'] = app2_filtered['jitter'].rolling(10).mean()
 
+df = pd.merge(df, app1_filtered[['mean10_delay_app1', 'mean10_jitter_app1']], on='instance', how='left')
 # Pandas mean so far 
 df.to_excel(f'instance_generator/graphs/{args.filename}/{args.filename}.xlsx')
 
