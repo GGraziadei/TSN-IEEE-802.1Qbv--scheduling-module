@@ -3,4 +3,4 @@ Duration: 10000000 us
 Path generation mode: wifi2wifi
 Number of requests: 3000
 Min size of the requests: 90 bytes
-Instance size: 5.6813906250000005e+35
+Instance size: 2.2725562500000002e+36
