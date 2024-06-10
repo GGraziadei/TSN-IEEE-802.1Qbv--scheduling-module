@@ -260,6 +260,7 @@ ax[1,0].set_title('Delay and jitter of App2')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_delay, label='App2 max delay')
 ax[1,1].plot(app2_n_requests, app2_filtered['mean100_delay_app2'], label='App2 mobile mean delay (window size 100)')
+ax[1,1].plot(app2_n_requests, app2_filtered['mean_delay_app2'], label='App2 mean delay')
 
 ax[1,1].plot(app2_n_requests, app2_cumulative_jitter, label='App2 max jitter')
 ax[1,1].legend()
