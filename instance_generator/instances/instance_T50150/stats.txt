@@ -1,0 +1,6 @@
+instance_generator/instances/instance_T50150/out_heuristic
+Number of items:  3000
+Accepted requests:  2036
+Feasibility:  0.6786666666666666
+Average pre_processing time:  0.19843300000000577
+Average solving time:  0.4378217401768173

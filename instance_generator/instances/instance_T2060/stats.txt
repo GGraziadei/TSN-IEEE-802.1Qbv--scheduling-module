@@ -1,0 +1,6 @@
+instance_generator/instances/instance_T2060/out_heuristic
+Number of items:  3000
+Accepted requests:  2123
+Feasibility:  0.7076666666666667
+Average pre_processing time:  0.30680800000000397
+Average solving time:  0.4469275289684405
