@@ -194,7 +194,7 @@ app1_filtered['mean100_jitter_app1'] = app1_filtered['jitter'].rolling(100).mean
 app2_filtered['mean100_jitter_app2'] = app2_filtered['jitter'].rolling(100).mean()
 
 df = pd.merge(df, app1_filtered[['mean100_delay_app1', 'mean100_jitter_app1']], on='instance', how='left')
-df = pd.merge(df, app2_filtered[['mean100_delay_app2', 'mean4100_jitter_app2']], on='instance', how='left')
+df = pd.merge(df, app2_filtered[['mean100_delay_app2', 'mean100_jitter_app2']], on='instance', how='left')
 
 # if the value is nan, replace it with the previous value
 df.fillna(method='ffill', inplace=True)
