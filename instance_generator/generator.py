@@ -133,7 +133,7 @@ network.add_edge("DC3", "DC4", "optical", processing_mode, optical_throughput, o
 for u,v in network.G.edges:
     print(f"Edge {u} -> {v}", network.G[u][v])
 
-optical_delay_lan = 5
+optical_delay_lan = 500
 
 ### Add user equipments ###
 args.ue_number = int(args.ue_number)
