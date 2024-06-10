@@ -194,6 +194,8 @@ app1_filtered['mean10_jitter_app1'] = app1_filtered['jitter'].rolling(10).mean()
 app2_filtered['mean10_jitter_app2'] = app2_filtered['jitter'].rolling(10).mean()
 
 df = pd.merge(df, app1_filtered[['mean10_delay_app1', 'mean10_jitter_app1']], on='instance', how='left')
+df = pd.merge(df, app2_filtered[['mean10_delay_app2', 'mean10_jitter_app2']], on='instance', how='left')
+
 # Pandas mean so far 
 df.to_excel(f'instance_generator/graphs/{args.filename}/{args.filename}.xlsx')
 
