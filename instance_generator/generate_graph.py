@@ -188,13 +188,13 @@ df['mean_jitter_app2'] = [cumlative_requests[r]['app2_mean_jitter'] for r in cum
 
 app1_filtered = df[df['app'] == 'App_1']
 app2_filtered = df[df['app'] == 'App_2']
-app1_filtered['mean40_delay_app1'] = app1_filtered['delay'].rolling(40).mean()
-app2_filtered['mean40_delay_app2'] = app2_filtered['delay'].rolling(40).mean()
-app1_filtered['mean40_jitter_app1'] = app1_filtered['jitter'].rolling(40).mean()
-app2_filtered['mean40_jitter_app2'] = app2_filtered['jitter'].rolling(40).mean()
+app1_filtered['mean100_delay_app1'] = app1_filtered['delay'].rolling(100).mean()
+app2_filtered['mean100_delay_app2'] = app2_filtered['delay'].rolling(100).mean()
+app1_filtered['mean100_jitter_app1'] = app1_filtered['jitter'].rolling(100).mean()
+app2_filtered['mean100_jitter_app2'] = app2_filtered['jitter'].rolling(100).mean()
 
-df = pd.merge(df, app1_filtered[['mean40_delay_app1', 'mean40_jitter_app1']], on='instance', how='left')
-df = pd.merge(df, app2_filtered[['mean40_delay_app2', 'mean40_jitter_app2']], on='instance', how='left')
+df = pd.merge(df, app1_filtered[['mean100_delay_app1', 'mean100_jitter_app1']], on='instance', how='left')
+df = pd.merge(df, app2_filtered[['mean100_delay_app2', 'mean4100_jitter_app2']], on='instance', how='left')
 
 # if the value is nan, replace it with the previous value
 df.fillna(method='ffill', inplace=True)
@@ -241,11 +241,11 @@ ax[0,0].set_xlabel('Number of requests')
 ax[0,0].set_ylabel('Time (ms)')
 ax[0,0].set_title('Delay and jitter of App1')
 
-ax[0,1].plot(app1_n_requests, app1_cumulative_delay, label='App1 cumulative max delay')
-ax[0,1].plot(app1_n_requests, app1_filtered['mean40_delay_app1'], label='App1 mobile mean delay (window size 40)')
+ax[0,1].plot(app1_n_requests, app1_cumulative_delay, label='App1 max delay')
+ax[0,1].plot(app1_n_requests, app1_filtered['mean100_delay_app1'], label='App1 mobile mean delay (window size 100)')
 ax[0,1].plot(app1_n_requests, app1_filtered['mean_delay_app1'], label='App1 mean delay')
 
-ax[0,1].plot(app1_n_requests, app1_cumulative_jitter, label='App1 cumulative max jitter')
+ax[0,1].plot(app1_n_requests, app1_cumulative_jitter, label='App1 max jitter')
 ax[0,1].legend()
 ax[0,1].set_xlabel('Number of requests')
 ax[0,1].set_ylabel('Time (ms)')
@@ -258,10 +258,10 @@ ax[1,0].set_xlabel('Number of requests')
 ax[1,0].set_ylabel('Time (ms)')
 ax[1,0].set_title('Delay and jitter of App2')
 
-ax[1,1].plot(app2_n_requests, app2_cumulative_delay, label='App2 cumulative max delay')
-#ax[1,1].plot(app2_n_requests, app2_delay_mean, label='App2 cumulative mean delay')
+ax[1,1].plot(app2_n_requests, app2_cumulative_delay, label='App2 max delay')
+ax[1,1].plot(app2_n_requests, app2_filtered['mean100_delay_app2'], label='App2 mobile mean delay (window size 100)')
 
-ax[1,1].plot(app2_n_requests, app2_cumulative_jitter, label='App2 cumulative max jitter')
+ax[1,1].plot(app2_n_requests, app2_cumulative_jitter, label='App2 max jitter')
 ax[1,1].legend()
 ax[1,1].set_xlabel('Number of requests')
 ax[1,1].set_ylabel('Time (ms)')
