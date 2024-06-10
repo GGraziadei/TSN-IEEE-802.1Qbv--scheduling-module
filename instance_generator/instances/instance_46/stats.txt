@@ -1,0 +1,6 @@
+instance_generator/instances/instance_46/out_heuristic
+Number of items:  3000
+Accepted requests:  84
+Feasibility:  0.028
+Average pre_processing time:  0.0009310000000000009
+Average solving time:  0.003170928571428572
