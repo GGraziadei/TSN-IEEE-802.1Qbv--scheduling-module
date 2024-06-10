@@ -120,6 +120,7 @@ duration = int(args.duration) # us
 # fixed values
 optical_throughput =  10 * 10**9 if args.speed == None else int(args.speed) * 10 # 10 Gbps
 optical_delay = duration/100 # 100 us 1% of the duration of the SF
+#optical_delay = 500
 optical_size = 1 if args.opticalsize == None else int(args.opticalsize)  # 1 byte
 radio_throughput = 48 * 10**6 if args.speed == None else int(args.speed) * 1# Mbps
 radio_delay = 4000 # us
@@ -136,9 +137,11 @@ for u,v in network.G.edges:
 optical_delay_lan = 500
 
 ### Add user equipments ###
-args.ue_number = int(args.ue_number)
 if not args.ue_number:
     args.ue_number = 200
+else:
+    args.ue_number = int(args.ue_number)
+
 ue_offest =  args.ue_number
 dc_offset = 2 * args.ue_number
 for i in range(1,args.ue_number + 1):
