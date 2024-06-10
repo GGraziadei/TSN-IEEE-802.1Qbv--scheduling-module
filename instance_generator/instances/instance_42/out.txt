@@ -1,0 +1,1060 @@
+Flow 1_1 -- 0 -- 354000.0 -- [(4, 1), (1, 326), (2, 2828), (3, 5330), (8, 15)]
+Flow 1_2 -- 0.0 -- 354000.0 -- [(4, 41), (1, 25326), (2, 27828), (3, 30330), (8, 55)]
+Flow 1_3 -- 0.0 -- 354000.0 -- [(4, 81), (1, 50326), (2, 52828), (3, 55330), (8, 95)]
+Flow 1_4 -- 0.0 -- 354000.0 -- [(4, 121), (1, 75326), (2, 77828), (3, 80330), (8, 135)]
+Flow 1_5 -- 0.0 -- 354000.0 -- [(4, 161), (1, 100326), (2, 102828), (3, 105330), (8, 175)]
+Flow 1_6 -- 0.0 -- 354000.0 -- [(4, 201), (1, 125326), (2, 127828), (3, 130330), (8, 215)]
+Flow 1_7 -- 0.0 -- 354000.0 -- [(4, 241), (1, 150326), (2, 152828), (3, 155330), (8, 255)]
+Flow 1_8 -- 0.0 -- 354000.0 -- [(4, 281), (1, 175326), (2, 177828), (3, 180330), (8, 295)]
+Flow 1_9 -- 0.0 -- 354000.0 -- [(4, 321), (1, 200326), (2, 202828), (3, 205330), (8, 335)]
+Flow 1_10 -- 0.0 -- 354000.0 -- [(4, 361), (1, 225326), (2, 227828), (3, 230330), (8, 375)]
+Flow 2
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1090
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 2_1 -- 0 -- 529000.0 -- [(7, 1), (1, 4701), (2, 7223), (3, 9745), (8, 22)]
+New request 2 solved in 0:00:00.003478 seconds
+Flow 3
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 92
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 3_1 -- 0 -- 379000.0 -- [(4, 2), (1, 951), (2, 3453), (3, 5955), (8, 16)]
+Flow 3_2 -- 0.0 -- 379000.0 -- [(4, 42), (1, 25951), (2, 28453), (3, 30955), (8, 56)]
+Flow 3_3 -- 0.0 -- 379000.0 -- [(4, 82), (1, 50951), (2, 53453), (3, 55955), (8, 96)]
+Flow 3_4 -- 0.0 -- 379000.0 -- [(4, 122), (1, 75951), (2, 78453), (3, 80955), (8, 136)]
+Flow 3_5 -- 0.0 -- 379000.0 -- [(4, 162), (1, 100951), (2, 103453), (3, 105955), (8, 176)]
+Flow 3_6 -- 0.0 -- 379000.0 -- [(4, 202), (1, 125951), (2, 128453), (3, 130955), (8, 216)]
+Flow 3_7 -- 0.0 -- 379000.0 -- [(4, 242), (1, 150951), (2, 153453), (3, 155955), (8, 256)]
+Flow 3_8 -- 0.0 -- 379000.0 -- [(4, 282), (1, 175951), (2, 178453), (3, 180955), (8, 296)]
+Flow 3_9 -- 0.0 -- 379000.0 -- [(4, 322), (1, 200951), (2, 203453), (3, 205955), (8, 336)]
+Flow 3_10 -- 0.0 -- 379000.0 -- [(4, 362), (1, 225951), (2, 228453), (3, 230955), (8, 376)]
+New request 3 solved in 0:00:00.038348 seconds
+Flow 4
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 950
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 4_1 -- 0 -- 704000.0 -- [(7, 9), (1, 9076), (2, 11595), (3, 14114), (5, 29)]
+New request 4 solved in 0:00:00.006001 seconds
+Flow 5
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1050
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 5_1 -- 0 -- 879000.0 -- [(7, 16), (1, 13451), (2, 15972), (3, 18493), (8, 36)]
+New request 5 solved in 0:00:00.004977 seconds
+Flow 6
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 980
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 6_1 -- 0 -- 879000.0 -- [(4, 3), (1, 5326), (2, 7846), (3, 10366), (5, 36)]
+New request 6 solved in 0:00:00.004218 seconds
+Flow 7
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1190
+	T_f: 1
+	Window size:
+	8	24	24	24	8
+Flow 7_1 -- 0 -- 1079000.0 -- [(7, 23), (1, 18451), (2, 20975), (3, 23499), (5, 44)]
+New request 7 solved in 0:00:00.004254 seconds
+Flow 8
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1120
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 8_1 -- 0 -- 1404000.0 -- [(7, 31), (1, 23451), (2, 25974), (3, 28497), (8, 57)]
+New request 8 solved in 0:00:00.008079 seconds
+Flow 9
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 90
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 9 has no candidates - local search needed
+Flow 10
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 110
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 10 has no candidates - local search needed
+Flow 11
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 116
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 11 has no candidates - local search needed
+Flow 12
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1010
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 12_1 -- 0 -- 1054000.0 -- [(4, 10), (1, 9701), (2, 12222), (3, 14743), (8, 43)]
+New request 12 solved in 0:00:00.005875 seconds
+Flow 13
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 120
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 13 has no candidates - local search needed
+Flow 14
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1050
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 14_1 -- 0 -- 1604000.0 -- [(4, 17), (1, 14076), (2, 16597), (3, 19118), (8, 65)]
+New request 14 solved in 0:00:00.002328 seconds
+Flow 15
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 102
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 15 has no candidates - local search needed
+Flow 16
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1020
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 16_1 -- 0 -- 1779000.0 -- [(4, 24), (1, 18475), (2, 20999), (3, 23523), (8, 72)]
+New request 16 solved in 0:00:00.004296 seconds
+Flow 17
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 92
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 17 has no candidates - local search needed
+Flow 18
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1090
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 18_1 -- 0 -- 1954000.0 -- [(7, 39), (1, 28451), (2, 30973), (3, 33495), (8, 79)]
+New request 18 solved in 0:00:00.004312 seconds
+Flow 19
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 118
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 19 has no candidates - local search needed
+Flow 20
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 110
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 20 has no candidates - local search needed
+Flow 21
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1100
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 21_1 -- 0 -- 2154000.0 -- [(7, 47), (1, 33451), (2, 35973), (3, 38495), (8, 87)]
+New request 21 solved in 0:00:00.002880 seconds
+Flow 22
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 90
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 22 has no candidates - local search needed
+Flow 23
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 119
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 23 has no candidates - local search needed
+Flow 24
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 99
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 24 has no candidates - local search needed
+Flow 25
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 98
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 25 has no candidates - local search needed
+Flow 26
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1140
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 26_1 -- 0 -- 1879000.0 -- [(7, 55), (1, 38451), (2, 40974), (3, 43497), (5, 76)]
+New request 26 solved in 0:00:00.002300 seconds
+Flow 27
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 970
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 27_1 -- 0 -- 2404000.0 -- [(7, 63), (1, 42826), (2, 45346), (3, 47866), (8, 97)]
+New request 27 solved in 0:00:00.003257 seconds
+Flow 28
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 110
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 28 has no candidates - local search needed
+Flow 29
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1120
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 29_1 -- 0 -- 2579000.0 -- [(4, 31), (1, 23474), (2, 25997), (3, 28520), (8, 104)]
+New request 29 solved in 0:00:00.002146 seconds
+Flow 30
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 120
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 30 has no candidates - local search needed
+Flow 31
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 105
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 31 has no candidates - local search needed
+Flow 32
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1060
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 32_1 -- 0 -- 2254000.0 -- [(7, 70), (1, 47826), (2, 50348), (3, 52870), (5, 91)]
+New request 32 solved in 0:00:00.002933 seconds
+Flow 33
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1130
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 33_1 -- 0 -- 2779000.0 -- [(7, 78), (1, 52826), (2, 55349), (3, 57872), (8, 112)]
+New request 33 solved in 0:00:00.003425 seconds
+Flow 34
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1180
+	T_f: 1
+	Window size:
+	8	24	24	24	8
+Flow 34_1 -- 0 -- 2654000.0 -- [(7, 86), (1, 57826), (2, 60350), (3, 62874), (5, 107)]
+New request 34 solved in 0:00:00.007231 seconds
+Flow 35
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 94
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 35 has no candidates - local search needed
+Flow 36
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 94
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 36 has no candidates - local search needed
+Flow 37
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 93
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 37 has no candidates - local search needed
+Flow 38
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 94
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 38 has no candidates - local search needed
+Flow 39
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 102
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 39 has no candidates - local search needed
+Flow 40
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1180
+	T_f: 1
+	Window size:
+	8	24	24	24	8
+Flow 40_1 -- 0 -- 2854000.0 -- [(7, 94), (1, 62826), (2, 65350), (3, 67874), (5, 115)]
+New request 40 solved in 0:00:00.018156 seconds
+Flow 41
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 113
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 41 has no candidates - local search needed
+Flow 42
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 990
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 42_1 -- 0 -- 1554000.0 -- [(4, 43), (1, 30326), (2, 32846), (3, 35366), (5, 63)]
+New request 42 solved in 0:00:00.003586 seconds
+Flow 43
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1020
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 43_1 -- 0 -- 3054000.0 -- [(7, 102), (1, 67201), (2, 69722), (3, 72243), (5, 123)]
+New request 43 solved in 0:00:00.003443 seconds
+Flow 44
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 116
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 44 has no candidates - local search needed
+Flow 45
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1060
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 45_1 -- 0 -- 3229000.0 -- [(7, 109), (1, 72201), (2, 74723), (3, 77245), (5, 130)]
+New request 45 solved in 0:00:00.004399 seconds
+Flow 46
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 105
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 46 has no candidates - local search needed
+Flow 47
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 940
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 47_1 -- 0 -- 2079000.0 -- [(4, 50), (1, 34701), (2, 37220), (3, 39739), (5, 84)]
+New request 47 solved in 0:00:00.008817 seconds
+Flow 48
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1050
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 48_1 -- 0 -- 3404000.0 -- [(7, 117), (1, 76576), (2, 79097), (3, 81618), (8, 137)]
+New request 48 solved in 0:00:00.010626 seconds
+Flow 49
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 96
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 49 has no candidates - local search needed
+Flow 50
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 116
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 50 has no candidates - local search needed
+Flow 51
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 970
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 51_1 -- 0 -- 2454000.0 -- [(4, 57), (1, 39076), (2, 41596), (3, 44116), (5, 99)]
+New request 51 solved in 0:00:00.006908 seconds
+Flow 52
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 95
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 52 has no candidates - local search needed
+Flow 53
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1060
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 53_1 -- 0 -- 3604000.0 -- [(7, 124), (1, 81576), (2, 84098), (3, 86620), (5, 145)]
+New request 53 solved in 0:00:00.034751 seconds
+Flow 54
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1190
+	T_f: 1
+	Window size:
+	8	24	24	24	8
+Flow 54_1 -- 0 -- 3804000.0 -- [(4, 64), (1, 44076), (2, 46600), (3, 49124), (5, 153)]
+New request 54 solved in 0:00:00.003320 seconds
+Flow 55
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1070
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 55_1 -- 0 -- 4004000.0 -- [(7, 132), (1, 86576), (2, 89098), (3, 91620), (5, 161)]
+New request 55 solved in 0:00:00.002791 seconds
+Flow 56
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1110
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 56_1 -- 0 -- 2979000.0 -- [(4, 72), (1, 49076), (2, 51599), (3, 54122), (8, 120)]
+New request 56 solved in 0:00:00.007796 seconds
+Flow 57
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 113
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 57 has no candidates - local search needed
+Flow 58
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1070
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 58_1 -- 0 -- 3579000.0 -- [(4, 83), (1, 55951), (2, 58473), (3, 60995), (8, 144)]
+New request 58 solved in 0:00:00.006124 seconds
+Flow 59
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 950
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 59_1 -- 0 -- 3979000.0 -- [(7, 140), (1, 90951), (2, 93470), (3, 95989), (8, 160)]
+New request 59 solved in 0:00:00.004981 seconds
+Flow 60
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 100
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 60 has no candidates - local search needed
+Flow 61
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1140
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 61_1 -- 0 -- 4204000.0 -- [(7, 147), (1, 95951), (2, 98474), (3, 100997), (5, 169)]
+New request 61 solved in 0:00:00.002100 seconds
+Flow 62
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1080
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 62_1 -- 0 -- 3779000.0 -- [(4, 91), (1, 60951), (2, 63473), (3, 65995), (8, 152)]
+New request 62 solved in 0:00:00.004954 seconds
+Flow 63
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 118
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 63 has no candidates - local search needed
+Flow 64
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 990
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 64_1 -- 0 -- 4404000.0 -- [(7, 155), (1, 100328), (2, 102846), (3, 105366), (8, 177)]
+New request 64 solved in 0:00:00.007916 seconds
+Flow 65
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1080
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 65_1 -- 0 -- 4579000.0 -- [(7, 162), (1, 105326), (2, 107848), (3, 110370), (8, 184)]
+New request 65 solved in 0:00:00.003281 seconds
+Flow 66
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 111
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 66 has no candidates - local search needed
+Flow 67
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 950
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 67_1 -- 0 -- 3179000.0 -- [(4, 99), (1, 65326), (2, 67845), (3, 70364), (8, 128)]
+New request 67 solved in 0:00:00.012884 seconds
+Flow 68
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 940
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 68_1 -- 0 -- 4729000.0 -- [(7, 170), (1, 109701), (2, 112220), (3, 114739), (5, 190)]
+New request 68 solved in 0:00:00.003611 seconds
+Flow 69
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 980
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 69_1 -- 0 -- 3429000.0 -- [(4, 106), (1, 69701), (2, 72221), (3, 74741), (5, 138)]
+New request 69 solved in 0:00:00.005669 seconds
+Flow 70
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1160
+	T_f: 1
+	Window size:
+	8	24	24	24	8
+Flow 70_1 -- 0 -- 4929000.0 -- [(7, 177), (1, 114701), (2, 117225), (3, 119749), (8, 198)]
+New request 70 solved in 0:00:00.003688 seconds
+Flow 71
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1200
+	T_f: 1
+	Window size:
+	8	24	24	24	8
+Flow 71_1 -- 0 -- 5129000.0 -- [(7, 185), (1, 119701), (2, 122225), (3, 124749), (5, 206)]
+New request 71 solved in 0:00:00.005831 seconds
+Flow 72
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 90
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 72 has no candidates - local search needed
+Flow 73
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 930
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 73_1 -- 0 -- 5404000.0 -- [(7, 193), (1, 124076), (2, 126595), (3, 129114), (8, 217)]
+New request 73 solved in 0:00:00.005572 seconds
+Flow 74
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 100
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 74 has no candidates - local search needed
+Flow 75
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 920
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 75_1 -- 0 -- 4404000.0 -- [(4, 113), (1, 74076), (2, 76595), (3, 79114), (5, 177)]
+New request 75 solved in 0:00:00.004271 seconds
+Flow 76
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1150
+	T_f: 1
+	Window size:
+	8	23	23	23	8
+Flow 76_1 -- 0 -- 4154000.0 -- [(4, 123), (1, 80951), (2, 83474), (3, 85997), (8, 167)]
+New request 76 solved in 0:00:00.003672 seconds
+Flow 77
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 112
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 77 has no candidates - local search needed
+Flow 78
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 107
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 78 has no candidates - local search needed
+Flow 79
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 102
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 79 has no candidates - local search needed
+Flow 80
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 103
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 80 has no candidates - local search needed
+Flow 81
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 108
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 81 has no candidates - local search needed
+Flow 82
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1010
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 82_1 -- 0 -- 5579000.0 -- [(7, 200), (1, 128451), (2, 130972), (3, 133493), (8, 224)]
+New request 82 solved in 0:00:00.005920 seconds
+Flow 83
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 118
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 83 has no candidates - local search needed
+Flow 84
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 114
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 84 has no candidates - local search needed
+Flow 85
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1070
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 85_1 -- 0 -- 5129000.0 -- [(4, 131), (1, 85951), (2, 88473), (3, 90995), (8, 206)]
+New request 85 solved in 0:00:00.005996 seconds
+Flow 86
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1090
+	T_f: 1
+	Window size:
+	8	22	22	22	8
+Flow 86_1 -- 0 -- 5679000.0 -- [(7, 207), (1, 133451), (2, 135973), (3, 138495), (5, 228)]
+New request 86 solved in 0:00:00.002234 seconds
+Flow 87
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 102
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 87 has no candidates - local search needed
+Flow 88
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 990
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 88_1 -- 0 -- 5754000.0 -- [(4, 139), (1, 90326), (2, 92846), (3, 95366), (8, 231)]
+New request 88 solved in 0:00:00.004199 seconds
+Flow 89
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 99
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 89 has no candidates - local search needed
+Flow 90
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 950
+	T_f: 1
+	Window size:
+	7	19	19	19	7
+Flow 90_1 -- 0 -- 4904000.0 -- [(4, 146), (1, 94701), (2, 97220), (3, 99739), (5, 197)]
+New request 90 solved in 0:00:00.004329 seconds
+Flow 91
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 111
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 91 has no candidates - local search needed
+Flow 92
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 96
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 92 has no candidates - local search needed
+Flow 93
+	E_f: [7, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1020
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 93_1 -- 0 -- 5879000.0 -- [(7, 215), (1, 137826), (2, 140347), (3, 142868), (5, 236)]
+New request 93 solved in 0:00:00.011392 seconds
+Flow 94
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 90
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 94 has no candidates - local search needed
+Flow 95
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 91
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 95 has no candidates - local search needed
+Flow 96
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 980
+	T_f: 1
+	Window size:
+	7	20	20	20	7
+Flow 96_1 -- 0 -- 5929000.0 -- [(4, 153), (1, 99076), (2, 101596), (3, 104116), (8, 238)]
+New request 96 solved in 0:00:00.005529 seconds
+Flow 97
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 99
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 97 has no candidates - local search needed
+Flow 98
+	E_f: [4, 1, 2, 3, 5]
+	P_f(us): 10000000
+	DELAY_f(us): 10000000
+	JITTER_f(us): 1000000.0
+	size_f (bit): 1040
+	T_f: 1
+	Window size:
+	7	21	21	21	7
+Flow 98_1 -- 0 -- 5329000.0 -- [(4, 163), (1, 105348), (2, 107870), (3, 110392), (5, 214)]
+New request 98 solved in 0:00:00.004884 seconds
+Flow 99
+	E_f: [4, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 110
+	T_f: 10
+	Window size:
+	1	3	3	3	1
+Flow 99 has no candidates - local search needed
+Flow 100
+	E_f: [7, 1, 2, 3, 8]
+	P_f(us): 1000000.0
+	DELAY_f(us): 1000000.0
+	JITTER_f(us): 100000.0
+	size_f (bit): 91
+	T_f: 10
+	Window size:
+	1	2	2	2	1
+Flow 100 has no candidates - local search needed
