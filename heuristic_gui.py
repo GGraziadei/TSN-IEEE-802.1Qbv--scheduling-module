@@ -7,7 +7,7 @@ import json
 SOLVER = "greedy"
 
 # instance_generator/factor_f/instance_11.json
-with open('tests/c11.json', 'r') as f:
+with open('instance_generator/instances/instance_C1_lan/instance.json', 'r') as f:
     data = json.load(f)
 
     # constructive solution

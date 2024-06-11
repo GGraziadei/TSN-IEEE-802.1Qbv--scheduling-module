@@ -62,7 +62,7 @@ class Heuristics(TSNScheduling):
             sigma = self.pipeline(e_src,e_dest,flow_id=flow["flow"].get_id())
             t_min = ceil(((t_min-1) * tau_e_src + sigma) / tau_e_dest) + 1
 
-            t_e = self.network.get_link_by_id(e_src).get_t_e()
+            t_e = self.network.get_link_by_id(e_dest).get_t_e()
             if t_min > t_e:
                 t_min = t_min - t_e
         
@@ -91,11 +91,10 @@ class Heuristics(TSNScheduling):
                     tau_e_src = self.network.get_link_by_id(e_id).get_tau_e()
                     sigma = self.pipeline(e_id,e_dest,flow_id=flow["flow"].get_id())
                     t_min = ceil(((t_min-1) * tau_e_src + sigma) / tau_e_dest) + 1
-                    t_e = self.network.get_link_by_id(e_id).get_t_e()
+                    t_e = self.network.get_link_by_id(e_dest).get_t_e()
                     if t_min > t_e:
                         t_min = t_min - t_e
             
-
                 candidate.append((e_id, t))
                 t_prev = (t -1) * self.network.get_link_by_id(e_id).get_tau_e()
                 d_e_last = self.network.get_link_by_id(e_id).get_d_e()
