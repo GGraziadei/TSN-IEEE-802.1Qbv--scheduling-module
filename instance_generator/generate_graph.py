@@ -246,7 +246,7 @@ ax[0,1].plot(app1_n_requests, app1_filtered['mean100_delay_app1'], label='App1 m
 ax[0,1].plot(app1_n_requests, app1_filtered['mean_delay_app1'], label='App1 mean delay')
 
 ax[0,1].plot(app1_n_requests, app1_cumulative_jitter, label='App1 max jitter')
-ax[0,1].legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+ax[0,1].legend( loc='middle left')
 ax[0,1].set_xlabel('Number of requests')
 ax[0,1].set_ylabel('Time (ms)')
 ax[0,1].set_title('Cumulative maximum delay and jitter of App1')
